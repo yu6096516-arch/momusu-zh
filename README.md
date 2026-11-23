@@ -1,12 +1,12 @@
 # 魔物娘TD 完整汉化
 
-《モンスター娘TD（魔物娘TDX）》PC 版的**全剧情 + 全界面中文汉化**，人工逐条润色。
+《モンスター娘TD（魔物娘TDX）》PC 版的**中文汉化**，主界面图片ui未汉化（施工中）
 
 ---
 
 ## 怎么装
 
-**方式一：下发行包（省事）**
+**方式一：下发行包
 
 到 [Releases](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.0) 下载 `MonmusuTD_zh-Hans_v1.0.zip`（59 MB），
 把里面的 `BepInEx` 文件夹覆盖到游戏根目录即可（已含插件、译文、字体、配置）。
