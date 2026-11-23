@@ -80,7 +80,7 @@ ManualSyncWithF6 = false     # F6 只重载本地
 
 ## 支持
 
-如果这个汉化帮到你，可以在 **爱发电** 请我喝杯咖啡：
+如果这个汉化帮到你，可以在 **爱发电** 请我喝桶席尔娃牛奶：
 
 <https://ifdian.net/a/mmstd>
 
