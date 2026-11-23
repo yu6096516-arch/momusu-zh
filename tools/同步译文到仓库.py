@@ -52,11 +52,12 @@ def sha(p):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--src", default=DEFAULT_SRC)
+    ap.add_argument("--repo", default=REPO, help="仓库根目录（含 translations\\）")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
     src = args.src
-    dst = os.path.join(REPO, "translations")
+    dst = os.path.join(args.repo, "translations")
     if not os.path.isdir(src):
         sys.exit("找不到游戏译文目录: %s" % src)
 

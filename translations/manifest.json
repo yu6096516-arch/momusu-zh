@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T13:16:23.303046+00:00",
+  "generatedAt": "2026-11-23T13:30:40.684930+00:00",
   "commit": "local",
   "files": {
     "styles.json": {
@@ -17587,13 +17587,13 @@
       "sha256": "b57e05668eb60fff056a552a3fb00f1708a152909f7aafa978d19a031b128ef5",
       "size": 150
     },
-    "UICanvas/_other/zh_Hans.json": {
-      "sha256": "dd41242868cc8cf6f77e8307f8a442b0e128272a949e427c913384a63d403cf4",
-      "size": 545
-    },
     "UICanvas/_awaked/zh_Hans.json": {
       "sha256": "45b03340c327f03e26274d49d3eef58dbac6609764f7465b2156de8967efacf2",
       "size": 806900
+    },
+    "UICanvas/_other/zh_Hans.json": {
+      "sha256": "dd41242868cc8cf6f77e8307f8a442b0e128272a949e427c913384a63d403cf4",
+      "size": 545
     }
   }
 }
