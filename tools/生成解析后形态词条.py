@@ -179,7 +179,7 @@ def build(pairs):
         if has_branch(k) or normalize_numbers(k) != k:
             source.setdefault(k, v)
 
-    new = {"branch": 0, "number": 0, "title": 0}
+    new = {"branch": 0, "number": 0, "title": 0, "itemname": 0}
     skipped = 0
     for k, v in source.items():
         flags = (True, False) if has_branch(k) else (None,)
@@ -216,7 +216,59 @@ def build(pairs):
             new["_map"][k] = "种族特性：" + cn
             new["title"] += 1
 
+    # 专武 / 装备 / 道具名 + 强化等级：运行时会在名字后面直接接「＋10」
+    for jp, cn in collect_item_names().items():
+        if NUM in jp:
+            cand = [(jp, cn)]
+        else:
+            cand = [(jp, cn), (jp + NUM, cn + NUM)]
+        for k, v in cand:
+            if not k.strip() or k in existing or k in new.get("_map", {}):
+                continue
+            new["_map"][k] = v
+            new["itemname"] += 1
+
     return existing, new.pop("_map", {}), new, skipped
+
+
+def collect_item_names():
+    """从各表的名字桶里收集 名字 -> 中文名。"""
+    out = {}
+
+    def take(d):
+        if isinstance(d, dict):
+            for k, v in d.items():
+                if isinstance(v, str) and v and v != k:
+                    out.setdefault(k, v)
+                elif isinstance(v, dict):
+                    take(v)
+
+    plan = {
+        "unique_weapon_data": "table[].name",
+        "equipment": "table[].name",
+        "item_template": "table[].display_name",
+    }
+    for cat, bucket in plan.items():
+        p = os.path.join(DEFAULT_UI_ROOT, cat, "zh_Hans.json")
+        if not os.path.exists(p):
+            continue
+        try:
+            d = json.load(open(p, encoding="utf-8"))
+        except Exception:
+            continue
+        take(d.get(bucket))
+
+    # unit_weapon 是路径表：只取专武名字控件
+    p = os.path.join(DEFAULT_UI_ROOT, "unit_weapon", "zh_Hans.json")
+    if os.path.exists(p):
+        try:
+            d = json.load(open(p, encoding="utf-8"))
+        except Exception:
+            d = {}
+        for path, table in (d.get("$global") or {}).items():
+            if path.endswith("UniqueWeapon_NameView/NameText"):
+                take(table)
+    return out
 
 
 DEFAULT_UI_ROOT = os.path.join(DEFAULT_GAME_TRANSLATIONS, "UICanvas")
@@ -256,6 +308,7 @@ def main():
     print("  + 分支标记形态: %d" % stats["branch"])
     print("  + 数值占位符形态: %d" % stats["number"])
     print("  + 特性标题: %d" % stats["title"])
+    print("  + 装备/专武强化名: %d" % stats["itemname"])
     print("  新增合计: %d（已存在跳过 %d）" % (len(generated), skipped))
 
     if args.check:
