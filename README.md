@@ -6,6 +6,13 @@
 
 ## 怎么装
 
+**方式一：下发行包（省事）**
+
+到 [Releases](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.0) 下载 `MonmusuTD_zh-Hans_v1.0.zip`（59 MB），
+把里面的 `BepInEx` 文件夹覆盖到游戏根目录即可（已含插件、译文、字体、配置）。
+
+**方式二：只用仓库译文**
+
 1. 先装好 **BepInEx**（IL2CPP 版）到游戏根目录
 2. 把本仓库 `translations` 整个文件夹放进：
 
