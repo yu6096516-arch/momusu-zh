@@ -119,6 +119,18 @@ ManualSyncWithF6 = false     # F6 只重载本地
 
 ---
 
+## 另一条路线：浏览器汉化器
+
+仓库 `browser-translator/` 里还有一套**不改游戏文件**的方案（本地代理 + 注入 JS），进度是「剧情和技能已汉化」。
+
+两个大文件（212 MB 分发包 / 235 MB 源码）放在 Releases：
+
+<https://github.com/yu6096516-arch/momusu-zh/releases/tag/v0.1.0>
+
+**建议用本仓库这套 BepInEx 方案**（覆盖全、稳定），浏览器方案当参考。
+
+---
+
 ## 鸣谢
 
 - 插件与初始译文框架：[Berumic](https://github.com/Berumic)（`MomusuMod-Android-workflow`、`MonsterMusumeTDChineseTranslation`）
