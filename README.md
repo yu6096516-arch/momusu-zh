@@ -4,23 +4,41 @@
 
 ---
 
+## 前置依赖（必须先有）
+
+发行包**只含插件 + 译文 + 字体 + 配置**，不含 BepInEx 核心。游戏根目录要先具备下面这套：
+
+| 依赖 | 版本（实测可用） | 说明 |
+|---|---|---|
+| 游戏本体 | モンスター娘TDX PC / Unity **2022.3.62** IL2CPP x64 | 需要有 `GameAssembly.dll`、`monster_musume_tdx.exe` |
+| BepInEx | **6.0.0-be.785（IL2CPP / win-x64）** | 含 `winhttp.dll`、`doorstop_config.ini`、`.doorstop_version`、`BepInEx\core\*` |
+| Unity Doorstop | **4.5.0** | 由 BepInEx 6 安装器一并放入；`doorstop_config.ini` 的 `target_assembly = BepInEx\core\BepInEx.Unity.IL2CPP.dll` |
+| .NET 运行时 | **.NET 6（6.0.7）** | BepInEx 6 的 loader 需要；游戏目录 `dotnet\`（coreclr/System.*）或系统装的 .NET 6 均可 |
+| Unity 托管库 | `BepInEx\unity-libs`（2022.3.62） | 第一次启动时 Il2CppInterop 用它生成 `BepInEx\interop\`，会慢几分钟，属正常 |
+
+其余都不用装：字体（`alimama`）、薄码（`MonsterMusumeTDMod.dll` 内置 `[Mosaic] EnableSpineMosaicReplacement`）、译文全部随包。
+
+> ⚠️ 发行包**不能单独用在裸游戏上**：包里只有 `BepInEx\config` 和 `BepInEx\plugins`，缺 `BepInEx\core` 会直接起不来。先装好 BepInEx 6 IL2CPP，再覆盖发行包。
+
+---
+
 ## 怎么装
 
 **方式一：下发行包
 
 到 [Releases](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.1) 下载 `MonmusuTD_zh-Hans_v1.1.zip`（59.5 MB），
-把里面的 `BepInEx` 文件夹覆盖到游戏根目录即可（已含插件、译文、字体、配置）。
+在**已装好上面前置**的游戏上，把里面的 `BepInEx` 文件夹覆盖到游戏根目录即可（已含插件、译文、字体、配置）。
 
 **方式二：只用仓库译文**
 
-1. 先装好 **BepInEx**（IL2CPP 版）到游戏根目录
+1. 先装好 **BepInEx 6（IL2CPP 版）** 到游戏根目录（见上表）
 2. 把本仓库 `translations` 整个文件夹放进：
 
 ```
 <游戏根目录>\BepInEx\plugins\MonsterMusumeTDMod\translations\
 ```
 
-3. 需要 **MonsterMusumeTDMod.dll**（汉化插件本体，不在本仓库）
+3. 需要 **MonsterMusumeTDMod.dll**（汉化插件本体，v0.1.132，不在本仓库）
 4. 启动游戏即生效
 
 > 插件源码在仓库 `source/`，二进制请到原作者处获取：`Berumic/MomusuMod-Android-workflow`
