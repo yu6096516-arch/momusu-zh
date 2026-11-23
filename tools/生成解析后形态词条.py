@@ -232,7 +232,11 @@ def build(pairs):
 
 
 def collect_item_names():
-    """从各表的名字桶里收集 名字 -> 中文名。"""
+    """从各表的名字桶里收集 名字 -> 中文名。
+
+    优先级：unit_weapon 的路径表（专武名字控件）最高 —— 插件会优先用路径表，
+    全局词表跟着用同一个译名才不会出现「列表一个名、弹窗另一个名」。
+    """
     out = {}
 
     def take(d):
@@ -243,6 +247,18 @@ def collect_item_names():
                 elif isinstance(v, dict):
                     take(v)
 
+    # 1) unit_weapon 是路径表：只取专武名字控件
+    p = os.path.join(DEFAULT_UI_ROOT, "unit_weapon", "zh_Hans.json")
+    if os.path.exists(p):
+        try:
+            d = json.load(open(p, encoding="utf-8"))
+        except Exception:
+            d = {}
+        for path, table in (d.get("$global") or {}).items():
+            if path.endswith("UniqueWeapon_NameView/NameText"):
+                take(table)
+
+    # 2) 数据表
     plan = {
         "unique_weapon_data": "table[].name",
         "equipment": "table[].name",
@@ -257,17 +273,6 @@ def collect_item_names():
         except Exception:
             continue
         take(d.get(bucket))
-
-    # unit_weapon 是路径表：只取专武名字控件
-    p = os.path.join(DEFAULT_UI_ROOT, "unit_weapon", "zh_Hans.json")
-    if os.path.exists(p):
-        try:
-            d = json.load(open(p, encoding="utf-8"))
-        except Exception:
-            d = {}
-        for path, table in (d.get("$global") or {}).items():
-            if path.endswith("UniqueWeapon_NameView/NameText"):
-                take(table)
     return out
 
 
