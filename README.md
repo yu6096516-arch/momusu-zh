@@ -8,7 +8,7 @@
 
 **方式一：下发行包
 
-到 [Releases](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.0) 下载 `MonmusuTD_zh-Hans_v1.0.zip`（59 MB），
+到 [Releases](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.1) 下载 `MonmusuTD_zh-Hans_v1.1.zip`（59.5 MB），
 把里面的 `BepInEx` 文件夹覆盖到游戏根目录即可（已含插件、译文、字体、配置）。
 
 **方式二：只用仓库译文**
@@ -93,6 +93,13 @@ ManualSyncWithF6 = false     # F6 只重载本地
 ---
 
 ## 更新记录
+
+**v1.1（2026-11-23）** — [下载](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.1) `MonmusuTD_zh-Hans_v1.1.zip`（59.5 MB）
+- 种族特性 / 能力说明整段回退日文：补 `[awaked]` / `[notawaked]` 解析后形态（843 条）
+- 特性标题「種族特性：XXX」缺失：按特性名表批量生成（1,992 条）
+- 专武 / 装备 / 道具名带强化等级（名字＋10）不翻译：生成 `<num>` 数字模板词条（786 条）
+- 特性正文里的数值表达式（`[MAG,0,0]` / `[0,2,0]` / `[duration]`）无法匹配（776 条）
+- 新增 `tools\生成解析后形态词条.py`、`tools\同步译文到仓库.py` 与 `publish_update.bat` 一键发布
 
 **2026-11-23**
 - **修复种族特性回退日文**：游戏显示前会把 `[awaked,…]` 标记解析掉，导致 833 条带觉醒分支的特性/能力文本精确匹配失败。新增 `translations/UICanvas/_awaked/` 分类，自动生成觉醒 / 未觉醒两种解析后形态（841 条），种族特性、能力说明全部正常显示中文
