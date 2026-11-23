@@ -77,5 +77,5 @@ ManualSyncWithF6 = false     # F6 只重载本地
 - **Alks丶**：UI 汉化
 - **浅海蜗牛**：主线汉化
 - **肉包**：全角色、全皮肤、全插件魔物娘TD账号提供
-- 插件与初始译文框架：[Berumic](https://github.com/Berumic)（`MomusuMod-Android-workflow`、`MonsterMusumeTDChineseTranslation`）
+- 插件与初始译文框架：[Berumic](https://github.com/Berumic)（`MomusuMod-Android-workflow`、`MonsterMusumeTDChineseTranslation`）——魔物娘安卓汉化提供
 - 字体：Alimama 方圆体（重做图集以支持生僻字）
