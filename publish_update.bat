@@ -10,7 +10,7 @@ echo  Monster Girl TD - publish translation update
 echo ================================================
 echo.
 echo [1/3] rebuild [awaked]/[notawaked] branch entries ...
-"%PY%" "%~dp0tools\生成觉醒分支词条.py"
+"%PY%" "%~dp0tools\生成解析后形态词条.py"
 if errorlevel 1 goto :err
 
 echo.
