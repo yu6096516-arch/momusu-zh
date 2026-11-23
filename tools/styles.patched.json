@@ -1,0 +1,1334 @@
+{
+  "$styles": {
+    "QuestDetail_SubSkillPrize/WindowBase/ScrollView/Viewport/Mask/Content/SaleContent/BackImage/Text": {
+      "font": "alimama",
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A",
+      "outline": true,
+      "lineSpacing": 8
+    },
+    "LeftZone/Unit/Guide/GuideMessageText": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "Content/Shop_ItemSaleDialogSubSkillIcon(Clone)/Content/Desc": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "lineSpacing": 8
+    },
+    "Canvas/UICanvas/CanvasManagerContent/WindowState/Home_Quest(Clone)/PageParent/Page/Quest_Entrance/UI_Com_Scene_RightIn_Center/Control/LeftZone/Guide/GuideMessageText": {
+      "font": "alimama",
+      "outline": false,
+      "lineSpacing": 8,
+      "faceDilate": 0.15
+    },
+    "Common_FilterButtonOrigin(Clone)/Off/Image": {
+      "font": "alimama",
+      "outline": false,
+      "lineSpacing": 8,
+      "faceDilate": 0.2
+    },
+    "Common_FilterButtonOrigin(Clone)/On/Image": {
+      "font": "alimama",
+      "outline": false,
+      "lineSpacing": 8,
+      "faceDilate": 0.2
+    },
+    "Canvas/UICanvas/CanvasManagerContent/WindowState/Home_Quest/PageParent/Page/Quest_Entrance/LeftZone/Guide/GuideMessageText": {
+      "font": "alimama",
+      "outline": false,
+      "lineSpacing": 8,
+      "faceDilate": 0.15
+    },
+    "RightZone/MissionListView/CommonMissionScroll/ScrollView_Mission/Viewport/Mask/Content/Node/Mission": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "lineSpacing": 8
+    },
+    "PageParent/Page/Menu_Sub_Menu/RightZone/Layout": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#FFFFFF",
+      "outlineWidth": 0.3,
+      "faceDilate": 0.2
+    },
+    "PageParent/Page/Menu_Sub_Menu(Clone)/UI_Com_Scene_LeftIn_Center(Clone)/Control/RightZone/Layout": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#FFFFFF",
+      "outlineWidth": 0.3,
+      "faceDilate": 0.2
+    },
+    "QuestContent/Back/Stamina": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#FFFFFF"
+    },
+    "QuestContent/Back/Lv": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#FFFFFF"
+    },
+    "Ranch_View/WindowBase/CenterTexts/InfoText": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "fontColor": "#6BF7D1"
+    },
+    "CenterTexts/TimerTextRoot/TimerText": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "fontColor": "#6BF7D1"
+    },
+    "ScrollView_Friend/Viewport/Mask/Content/Friend_Content/Text": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.1
+    },
+    "ScrollView_Friend/Viewport/Mask/Content/Friend_Content/Text_LoginNum": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.1
+    },
+    "FriendView/FollowerScrollRoot/FollowerTextArea/Text": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.1
+    },
+    "FriendView/FollowerScrollRoot/FollowerTextArea/FollowerNumText": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.1
+    },
+    "DeckView_InputDeckName/WindowBase/Title": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.1
+    },
+    "Lv/Title": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#FFFFFF"
+    },
+    "Page/Present_List(Clone)/WindowBase/ScrollView/Viewport/Mask/Content/PresentContent(Clone)/Name": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A"
+    },
+    "MissionListView/CommonMissionScroll/ScrollView_Mission/Viewport/Mask/Content/ScrollContent_MissionHierarchy(Clone)/MainContent/Mission": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A"
+    },
+    "MissionListView/CommonMissionScroll/ScrollView_Mission/Viewport/Mask/Content/ScrollContent_MissionHierarchy(Clone)/ChildArea/ChildContent(Clone)/Mission": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A"
+    },
+    "MissionListView/CommonMissionScroll/ScrollView_Mission/Viewport/Mask/Content/Node(Clone)/Present": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A"
+    },
+    "WindowBase/Bottom/Center/Image": {
+      "font": "alimama",
+      "faceDilate": 0.1,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.25,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.45,
+      "underlayDilate": 0.3,
+      "underlaySoftness": 0
+    },
+    "ScrollView_Mission/Viewport/Mask/Content/Node(Clone)/Present_Btn/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "RightZone/MissionListView/All_Present_Btn/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "SkillDialog/Scroll View/BorderLine/Title": {
+      "font": "alimama",
+      "faceDilate": 0.15,
+      "outline": false
+    },
+    "SkillDialog/ExSkillArea/BorderLine/Title": {
+      "font": "alimama",
+      "faceDilate": 0.15,
+      "outline": false
+    },
+    "AcceptView/Accept/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "AcceptMenu/AcceptLump/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "WindowBase/Bottom": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "RightMenu/SpeechRoot/Speech/SpeechText": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "Viewport/Mask/Content/Shop_SaleContent2": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "Viewport/Content/Text_ItemExplanation": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "WindowBase/WindowDesign/Item/Text/Viewport/Text": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "WindowBase/WindowDesign/Item/Text": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.17,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "WindowBase/ExchangeNumArea/Remaining/Text_Remaining": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.1,
+      "lineSpacing": 8
+    },
+    "Viewport/Mask/Content/Event_CharacterGrowthListContent(Clone)/Text": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3
+    },
+    "Story_Detail(Clone)/RightZone/Profile": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.1,
+      "lineSpacing": 8
+    },
+    "RightZone/MissionListView/EventMissionScroll/ScrollView_Mission/Viewport/Mask/Content/Node(Clone)/Mission": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A"
+    },
+    "Menu_Equip_Item_Quest_Popup(Clone)/WindowBase/Text_Explanation": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "Quest_StandbyDelegationConsumption(Clone)/WindowBase/ConsumptionItemName": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#FFFFFF",
+      "faceDilate": 0.2,
+      "lineSpacing": 8
+    },
+    "ScrollContent_RewarItem(Clone)(Clone)/ItemName": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "ChapterContent(Clone)/StoryNode/StoryMainContent(Clone)/Text": {
+      "font": "alimama",
+      "faceDilate": 0.15,
+      "outline": false
+    },
+    "Control/Name/Control/Bg/RaceBackText/Text": {
+      "font": "alimama",
+      "fontColor": "#2A2829",
+      "outlineColor": "#2A2829",
+      "faceDilate": 0.2
+    },
+    "Control/Name/Control/Bg/NameBackText/Text": {
+      "font": "alimama",
+      "fontColor": "#544A4A",
+      "outlineColor": "#544A4A",
+      "faceDilate": 0.25
+    },
+    "Control/Name/Control/Bg/NameBackText/Name/Text": {
+      "font": "alimama",
+      "fontColor": "#EFCF8B",
+      "outlineColor": "#2E2929",
+      "faceDilate": 0.25
+    },
+    "Control/Name/Control/Bg/RaceBackText/Race/Text": {
+      "font": "alimama",
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#2A2829"
+    },
+    "WindowBase/UpperBackground/Text_Description": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "Friend_Content(Clone)/BtnDown": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Friend_Content(Clone)/BtnGreeting/Greeting/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Menu_Friend(Clone)/RightZone/FriendView/BaseScrollRoot/ScrollView_Friend/Viewport/Mask/Content/Friend_Content(Clone)/Text_RankNum/Text": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "LeftZone/ScrollView_Story/Status/Text": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "LeftZone/ScrollView_Story/Profile/Text": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Common_SortFilter/WindowBase/Reset/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Unit_Detail_AttachAbility/WindowBase/RemoveButton/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "BottomArea/Buttons/Btn/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "QuestDetail(Clone)/QuestName": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "UnitSelectView_Gacha/WindowBase/Text": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "UnitSelectView_Gacha/WindowBase/Title/Text": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "Gacha_ProvisionRate(Clone)/WindowBase/MessageView/Content2/Text": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.1,
+      "lineSpacing": 8
+    },
+    "Common_SortFilter(Clone)/WindowBase/Decide/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "WindowBase/Title/Text": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "WindowBase/AutoSelectButton/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "ResetButton/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "RarityToggle0/Off/Image": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "RarityToggle2/Off/Image": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "RarityToggle3/Off/Image": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "RarityToggle1/Off/Image": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "RarityToggle0/On/Image": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "RarityToggle2/On/Image": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "RarityToggle3/On/Image": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "RarityToggle1/On/Image": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "SubStoryBanner/StarText": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "ExSkillRoot/ExSkillTextArea/TextArea/Text": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.35,
+      "faceDilate": 0.2,
+      "lineSpacing": 8
+    },
+    "LeftZone/Btn_Friend/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "LeftZone/Btn/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "ScrollView/Viewport/ScrollContent/TextSource": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "WindowBase/Title/Text_Title": {
+      "font": "alimama",
+      "outline": false,
+      "fontColor": "#ffffff",
+      "faceDilate": 0.15,
+      "lineSpacing": 8
+    },
+    "uiCanvas/UnitStatus/Details/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "uiCanvas/UniqueWeaponStatus/UniqueWeapon_CreateView/CreateUniqueWeapon_Btn/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "BomStatus/Details/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "QuestRetire/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "BackButton/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Retry/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Mission_Notification/WindowBase/Text": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "SectionLong/On/Text": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "SectionLong/Off/Text": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Button/Details/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Button/Decision/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "LeftZone/FriendProfile/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "BottomButtons/OkButton/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "BottomArea/Rental": {
+      "font": "alimama",
+      "faceDilate": 0.1,
+      "fontColor": "#B69A7E",
+      "outline": false
+    },
+    "BottomArea/FollowButton/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "BottomArea/DeckCopyButton/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "UICanvasPopupTop/CanvasManagerContent/Page/Shop_SelectBox(Clone)/WindowBase/Buttons/Btn/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "QuestSecretContent(Clone)/Top/StarText": {
+      "outline": false,
+      "faceDilate": 0.1
+    },
+    "uiCanvas/Dialog/Decide/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "WindowBase/Cancel/TextMesh": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "WindowBase/Ok/TextMesh": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "uiCanvas/Dialog/RemoveAll/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Unit_AutoSetting(Clone)/WindowBase/Decide/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Buttons/ReceiveButton/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Buttons/CloseButton/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "LeftZone/Dialog/Btn_Profile/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "RightZone/Decision/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "ToggleGroup_Skill/ExistTargetButton": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "fontColor": "#544A4A",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "ToggleGroup_Skill/ImmidiatelyButton": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "fontColor": "#544A4A",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "ToggleGroup_ClassAction/ImmidiatelyButton": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "fontColor": "#544A4A",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "ToggleGroup_ClassAction/SkillActiveButton": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "fontColor": "#544A4A",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "WindowBase/Title_ClassAction": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A",
+      "lineSpacing": 8
+    },
+    "WindowBase/Title_Skill": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A",
+      "lineSpacing": 8
+    },
+    "QuestContentWildHunt(Clone)/Back/Stamina/Title": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "Rein/ReinBtn/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "BottomArea/ReinforceUniqueWeapon_Btn/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "WindowBase/EnemyDesc": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "fontColor": "#544A4A",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "AcquiredSkill/FeaturedSkillName": {
+      "outline": true,
+      "outlineColor": "#544A4A"
+    },
+    "Back/Basic/FeaturedSkillName": {
+      "outline": true,
+      "outlineColor": "#544A4A"
+    },
+    "UniqueSkillName": {
+      "outline": true,
+      "outlineColor": "#544A4A"
+    },
+    "SaleContent(Clone)/BackImage/Name": {
+      "outline": true,
+      "outlineColor": "#544A4A"
+    },
+    "LegendContent/SaleContent/Text": {
+      "font": "alimama",
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "faceDilate": 0.2,
+      "lineSpacing": 8
+    },
+    "Buttons/Btn/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "ReceiveButton/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Controller/CloseButton/Text": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Quest_Secret_Top/Main/TitleText": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "fontColor": "#544A4A",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "Text_LoginNum": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "fontColor": "#544A4A",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "Text_ItemName": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.1,
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "Text_ItemExplanation": {
+      "font": "alimama",
+      "faceDilate": 0.15,
+      "outline": false
+    },
+    "Friend_Content/Text": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "fontColor": "#544A4A",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "Text_RankNum/Text": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.15,
+      "fontColor": "#544A4A",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "TextBox/AbilityText": {
+      "font": "alimama",
+      "outlineColor": "#544A4A",
+      "lineSpacing": 8
+    },
+    "Btn_Reset/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "Btn/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "QuestContent(Clone)/Back/Basic/Lv": {
+      "outline": true,
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A"
+    },
+    "Back/Basic/Stamina": {
+      "outline": true,
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A"
+    },
+    "Btn2/Image": {
+      "font": "alimama",
+      "faceDilate": 0.2,
+      "outline": true,
+      "outlineColor": "#544A4A",
+      "outlineWidth": 0.3,
+      "underlay": true,
+      "underlayColor": "#26211F",
+      "underlayOffsetX": 0.1,
+      "underlayOffsetY": -0.4,
+      "underlayDilate": 0.5,
+      "underlaySoftness": 0
+    },
+    "PointItem/PointItemName": {
+      "outline": false,
+      "faceDilate": 0.15
+    },
+    "Quest_TempleTower/LeftZone/InfoBase/Text (TMP)": {
+      "outline": false,
+      "faceDilate": 0.15
+    },
+    "Basic/HighScore/Title": {
+      "outlineColor": "#FFFFFF"
+    },
+    "BattleLogShareBanner(Clone)/TopArea/QuestName": {
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A"
+    },
+    "BattleLogBanner(Clone)/TopArea/QuestName": {
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A"
+    },
+    "WindowBase/Desc": {
+      "font": "alimama",
+      "outline": true,
+      "faceDilate": 0.2,
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A",
+      "lineSpacing": 8
+    },
+    "QuestDetail_TrainingEvent_MenuToggle/ToggleButton/Off/Text": {
+      "font": "alimama",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "QuestDetail_TrainingEvent_MenuToggle/ToggleButton/On/Text": {
+      "font": "alimama",
+      "outlineColor": "#FFFFFF",
+      "lineSpacing": 8
+    },
+    "PointItemGroup1/InfoBase/Text (TMP)": {
+      "font": "alimama",
+      "outline": false,
+      "faceDilate": 0.2
+    },
+    "Ef_GetSkill/Skill/Name": {
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A"
+    },
+    "Ef_GetSkill/Skill/Text": {
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A",
+      "lineSpacing": 8
+    },
+    "CombineIcon/Title": {
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A"
+    },
+    "MaterialIcon/Title": {
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A"
+    },
+    "Main/UI/SkillDialog/UniqueWeaponBtn/UniqueWeapon_NameView/OwnerText": {
+      "faceDilate": 0.2,
+      "outline": true,
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A"
+    },
+    "CreateMenu/UniqueWeapon_NameView/OwnerText": {
+      "faceDilate": 0.2,
+      "outline": false
+    },
+    "BomListIcon/AbilityText": {
+      "fontColor": "#FFFFFF",
+      "outlineColor": "#544A4A",
+      "lineSpacing": 8
+    },
+    "Viewport/Text_Explanation": {
+      "faceDilate": 0.1,
+      "outline": false,
+      "lineSpacing": 8
+    },
+    "Content/Node/Name": {
+      "outline": false,
+      "faceDilate": 0.1
+    },
+    "CategoryCollectiveToggle/Off/Text": {
+      "outlineColor": "#FFFFFF",
+      "faceDilate": 0.2
+    },
+    "CategoryCollectiveToggle/On/Text": {
+      "outlineColor": "#FFFFFF",
+      "faceDilate": 0.2
+    },
+    "UniqueWeapon_NameView/OwnerText": {
+      "outline": false,
+      "faceDilate": 0.1
+    },
+    "CreateMenu/UniqueWeapon_NameView/NameText": {
+      "outline": false,
+      "faceDilate": 0.1
+    },
+    "Item/Text_ItemName": {
+      "fontColor": "#FFFFFF",
+      "outline": true,
+      "outlineColor": "#544A4A"
+    },
+    "StockRoot/Text": {
+      "outline": false,
+      "faceDilate": 0.1,
+      "lineSpacing": 8
+    },
+    "CategoryButton/SupportCategory/Off/Image": {
+      "fontColor": "#FFFFFF"
+    },
+    "CategoryButton/SupportCategory/On/Image": {
+      "fontColor": "#FFFFFF"
+    },
+    "CategoryButton/DefenseCategory/Off/Image": {
+      "fontColor": "#FFFFFF"
+    },
+    "CategoryButton/DefenseCategory/On/Image": {
+      "fontColor": "#FFFFFF"
+    },
+    "CategoryButton/AttackCategory/Off/Image": {
+      "fontColor": "#FFFFFF"
+    },
+    "CategoryButton/AttackCategory/On/Image": {
+      "fontColor": "#FFFFFF"
+    },
+    "LoginBonusSegment_1(Clone)/DayText/Text": {
+      "font": "alimama"
+    },
+    "LoginBonusSheet_2(Clone)/NextBtn/Image": {
+      "font": "alimama"
+    },
+    "LoginBonusSheet_2(Clone)/PrevBtn/Image": {
+      "font": "alimama"
+    },
+    "Period/Layout/Text": {
+      "font": "alimama"
+    }
+  }
+}

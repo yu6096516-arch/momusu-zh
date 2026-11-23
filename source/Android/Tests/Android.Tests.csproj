@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DefineConstants>ANDROID</DefineConstants>
+    <AndroidWorkspace Condition="'$(AndroidWorkspace)' == ''">$(MSBuildThisFileDirectory)..\..\work</AndroidWorkspace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Configuration.cs;..\..\Core\ModConfig.cs;..\..\Services\TranslationManager.cs;..\..\Patches\TranslationUpdateController.cs" />
+    <Compile Include="..\..\Services\MaterialKeywords.cs" />
+    <Compile Include="..\..\Services\UiRefreshQueue.cs;..\..\Services\UiStylePolicy.cs" />
+    <Compile Include="..\..\Services\UiHierarchyClassifier.cs" />
+    <Compile Include="../../Services/StoryTranslationIndex.cs;../../Services/StorySceneContext.cs;../../Services/ScenarioContext.cs" />
+    <Reference Include="Mono.Cecil" HintPath="$(AndroidWorkspace)\Loader\Mono.Cecil.dll" />
+  </ItemGroup>
+</Project>

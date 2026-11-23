@@ -1,0 +1,257 @@
+name: Build Mod APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      download_from_dmm:
+        description: Download current FANZA APK from DMM (ignores Release inputs)
+        required: true
+        default: false
+        type: boolean
+      apk_release_tag:
+        description: 'Source Release tag; blank selects latest apk-<game>-v<versionCode> per game'
+        required: false
+        type: string
+      apk_asset_name:
+        description: 'Exact APK filename; blank requires exactly one APK in the Release'
+        required: false
+        type: string
+      publish_release:
+        description: 'Publish or update mod-<game>-v<versionCode>'
+        required: true
+        default: true
+        type: boolean
+      force:
+        description: 'Rebuild even if the input fingerprint is unchanged'
+        required: true
+        default: false
+        type: boolean
+  release:
+    types: [published, edited]
+  push:
+    paths:
+      - 'Android/**'
+      - 'Core/**'
+      - 'Services/**'
+      - 'Patches/**'
+      - 'ci/**'
+      - '.github/workflows/build-mod-apk.yml'
+  schedule:
+    # Daily 15:05 Asia/Shanghai (UTC+8)
+    - cron: '5 7 * * *'
+  repository_dispatch:
+    types: [mod-input-updated]
+
+permissions:
+  contents: read
+
+# Serialize publication because a fixed game/version tag is updated in place.
+concurrency:
+  group: build-mod-apk
+  cancel-in-progress: false
+
+jobs:
+  select:
+    if: >-
+      (github.event_name != 'release' || startsWith(github.event.release.tag_name, 'apk-')) &&
+      (github.event_name != 'push' || github.ref == format('refs/heads/{0}', github.event.repository.default_branch))
+    runs-on: windows-2022
+    outputs:
+      matrix: ${{ steps.targets.outputs.matrix }}
+      has_targets: ${{ steps.targets.outputs.has_targets }}
+      source_commit: ${{ steps.source.outputs.commit }}
+    steps:
+      - uses: actions/checkout@v4
+        id: source
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.ref || github.event.repository.default_branch }}
+          persist-credentials: false
+      - id: targets
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          SOURCE_TAG: ${{ inputs.apk_release_tag || github.event.release.tag_name }}
+          SOURCE_ASSET: ${{ inputs.apk_asset_name }}
+          DMM_DOWNLOAD: ${{ github.event_name == 'schedule' || inputs.download_from_dmm }}
+        run: |
+          ./ci/Select-Targets.ps1 -Repository $env:REPOSITORY -SourceTag $env:SOURCE_TAG -AssetName $env:SOURCE_ASSET -DirectDownload:($env:DMM_DOWNLOAD -eq 'true')
+
+  build:
+    needs: select
+    if: needs.select.outputs.has_targets == 'true'
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix: ${{ fromJSON(needs.select.outputs.matrix) }}
+    runs-on: windows-2022
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Checkout Mod source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.select.outputs.source_commit }}
+          persist-credentials: false
+
+      - name: Check DMM APK metadata before download
+        id: apk_metadata
+        if: matrix.downloadUrl != ''
+        env:
+          SOURCE_URL: ${{ matrix.downloadUrl }}
+        run: ./ci/Probe-DirectApk.ps1 -Url $env:SOURCE_URL
+
+      - name: Restore unchanged original APK
+        id: apk_cache
+        if: steps.apk_metadata.outputs.key != ''
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ runner.temp }}/input.apk
+          key: ${{ steps.apk_metadata.outputs.key }}
+
+      - name: Download original APK when needed
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          SOURCE_TAG: ${{ matrix.sourceTag }}
+          SOURCE_ASSET: ${{ matrix.assetName }}
+          SOURCE_URL: ${{ matrix.downloadUrl }}
+          APK_CACHE_HIT: ${{ steps.apk_cache.outputs.cache-hit }}
+          APK_ETAG: ${{ steps.apk_metadata.outputs.etag }}
+        run: |
+          if ($env:SOURCE_URL) {
+            if ($env:APK_CACHE_HIT -eq 'true') {
+              Write-Host 'DMM APK unchanged; reusing cached original APK.'
+            } else {
+              ./ci/Get-DirectApk.ps1 -Url $env:SOURCE_URL -Output "$env:RUNNER_TEMP/input.apk" -ExpectedETag $env:APK_ETAG
+            }
+          } else {
+            ./ci/Get-ReleaseAsset.ps1 -Repository $env:REPOSITORY -Tag $env:SOURCE_TAG -AssetName $env:SOURCE_ASSET -Output "$env:RUNNER_TEMP/input.apk"
+          }
+
+      - name: Cache validated original APK
+        if: steps.apk_metadata.outputs.key != '' && steps.apk_cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ runner.temp }}/input.apk
+          key: ${{ steps.apk_metadata.outputs.key }}
+
+      - name: Download pinned toolchain
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          $config = Get-Content ./ci/toolchain.json -Raw | ConvertFrom-Json
+          ./ci/Get-ReleaseAsset.ps1 -Repository $env:REPOSITORY -Tag $config.releaseTag -AssetName $config.assetName -Output "$env:RUNNER_TEMP/toolchain.zip" -Sha256 $config.sha256
+          [IO.Compression.ZipFile]::ExtractToDirectory("$env:RUNNER_TEMP/toolchain.zip", "$env:RUNNER_TEMP/toolchain")
+
+      - name: Checkout current translations
+        uses: actions/checkout@v4
+        with:
+          repository: Berumic/MonsterMusumeTDChineseTranslation
+          ref: main
+          path: work/translations
+          persist-credentials: false
+
+      - name: Check input fingerprint
+        id: probe
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          EXPECTED_GAME: ${{ matrix.game }}
+          EXPECTED_VERSION: ${{ matrix.sourceVersion }}
+          FORCE_BUILD: ${{ inputs.force || (github.event_name == 'workflow_dispatch' && !inputs.publish_release) }}
+        run: |
+          ./ci/Check-Build.ps1 -Repository $env:REPOSITORY -Apk "$env:RUNNER_TEMP/input.apk" -Aapt "$env:RUNNER_TEMP/toolchain/BuildTools/aapt.exe" -TranslationsRoot "$env:GITHUB_WORKSPACE/work/translations" -ExpectedGame $env:EXPECTED_GAME -ExpectedVersion $env:EXPECTED_VERSION -Force:($env:FORCE_BUILD -eq 'true')
+
+      - name: Check signing configuration
+        if: steps.probe.outputs.needed == 'true'
+        env:
+          KEY: ${{ secrets.APK_KEYSTORE_BASE64 }}
+          ALIAS: ${{ secrets.APK_KEY_ALIAS }}
+          STORE_PASS: ${{ secrets.APK_STORE_PASSWORD }}
+          KEY_PASS: ${{ secrets.APK_KEY_PASSWORD }}
+        run: |
+          foreach ($name in @('KEY','ALIAS','STORE_PASS','KEY_PASS')) {
+            if (![Environment]::GetEnvironmentVariable($name)) { throw "Missing signing secret: $name. See README.md." }
+          }
+
+      - name: Install .NET SDKs
+        if: steps.probe.outputs.needed == 'true'
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            10.0.x
+            6.0.x
+
+      - name: Install Java
+        if: steps.probe.outputs.needed == 'true'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Install Python
+        if: steps.probe.outputs.needed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Download pinned Apktool and test recipes
+        if: steps.probe.outputs.needed == 'true'
+        run: |
+          $config = Get-Content ./ci/toolchain.json -Raw | ConvertFrom-Json
+          Invoke-WebRequest $config.apktool.url -OutFile "$env:RUNNER_TEMP/apktool.jar"
+          if ((Get-FileHash "$env:RUNNER_TEMP/apktool.jar").Hash -ne $config.apktool.sha256) { throw 'Apktool checksum mismatch.' }
+          python -m unittest discover -s ci/tests -v
+          if ($LASTEXITCODE -ne 0) { throw 'Manifest tests failed.' }
+          ./ci/tests/Test-ReleaseLogic.ps1
+          ./ci/tests/Test-ApkProbe.ps1
+
+      - name: Build, test, isolate package, align, sign and verify
+        if: steps.probe.outputs.needed == 'true'
+        env:
+          APK_KEYSTORE_BASE64: ${{ secrets.APK_KEYSTORE_BASE64 }}
+          APK_KEY_ALIAS: ${{ secrets.APK_KEY_ALIAS }}
+          APK_STORE_PASSWORD: ${{ secrets.APK_STORE_PASSWORD }}
+          APK_KEY_PASSWORD: ${{ secrets.APK_KEY_PASSWORD }}
+          EXPECTED_GAME: ${{ matrix.game }}
+          SOURCE_TAG: ${{ matrix.sourceTag }}
+          SOURCE_APK_URL: ${{ matrix.downloadUrl }}
+        run: |
+          $keystore = "$env:RUNNER_TEMP/mod-signing.p12"
+          try {
+            [IO.File]::WriteAllBytes($keystore, [Convert]::FromBase64String($env:APK_KEYSTORE_BASE64))
+            Remove-Item Env:APK_KEYSTORE_BASE64
+            ./ci/Build-Apk.ps1 -Apk "$env:RUNNER_TEMP/input.apk" -Toolchain "$env:RUNNER_TEMP/toolchain" -TranslationsRoot "$env:GITHUB_WORKSPACE/work/translations" -Keystore $keystore -KeyAlias $env:APK_KEY_ALIAS -Apktool "$env:RUNNER_TEMP/apktool.jar" -ExpectedGame $env:EXPECTED_GAME -SourceReleaseTag $env:SOURCE_TAG -Java "$env:JAVA_HOME/bin/java.exe" -Workspace "$env:RUNNER_TEMP/mod-build" -Output "$env:GITHUB_WORKSPACE/dist"
+          } finally {
+            if (Test-Path -LiteralPath $keystore) { Remove-Item -LiteralPath $keystore -Force }
+            Remove-Item Env:APK_STORE_PASSWORD,Env:APK_KEY_PASSWORD -ErrorAction SilentlyContinue
+          }
+
+      - name: Upload verified outputs
+        if: steps.probe.outputs.needed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.probe.outputs.tag }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Publish or update Mod Release
+        if: steps.probe.outputs.needed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.publish_release)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          ./ci/Publish-Release.ps1 -Repository $env:REPOSITORY -Output "$env:GITHUB_WORKSPACE/dist"
+
+      - name: Remove signing material
+        if: always()
+        run: |
+          $keystore = "$env:RUNNER_TEMP/mod-signing.p12"
+          if (Test-Path -LiteralPath $keystore) { Remove-Item -LiteralPath $keystore -Force }
