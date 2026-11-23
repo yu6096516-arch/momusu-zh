@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T12:49:48.928930+00:00",
+  "generatedAt": "2026-11-23T13:03:40.345553+00:00",
   "commit": "local",
   "files": {
     "styles.json": {
@@ -17590,6 +17590,10 @@
     "UICanvas/_other/zh_Hans.json": {
       "sha256": "dd41242868cc8cf6f77e8307f8a442b0e128272a949e427c913384a63d403cf4",
       "size": 545
+    },
+    "UICanvas/_awaked/zh_Hans.json": {
+      "sha256": "ca4971da40248426a4d76546ac08a883ddc151f35245dbf00f7a04d430f220a3",
+      "size": 401981
     }
   }
 }
