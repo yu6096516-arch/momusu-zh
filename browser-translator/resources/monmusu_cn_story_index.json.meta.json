@@ -1,0 +1,27 @@
+{
+  "commit": "e459e7329588dbcb2beba78c283681ff3ae0066c",
+  "manifestSha256": "bf4607606d616d0013c6d9ed67d9c5e6763eb3aa15b32a538847f4aa81c19cd1",
+  "corpusSha256": "64cbdcf538af059fde391198e6a49fe17b6bca3cc75c8a5669d00cd66edd3589",
+  "indexSha256": "d64c19d61ecb1c73da5de44f5cdb86c84974bd0e40d7bb7e7a889cd11acbd12a",
+  "activatedAt": "2026-11-15T14:35:41+00:00",
+  "stats": {
+    "scenarioFiles": 4238,
+    "scenarioIds": 4183,
+    "duplicateScenarioFiles": 55,
+    "rawRows": 162564,
+    "emptyRows": 317,
+    "unlistedFiles": 0,
+    "namesEntries": 1253,
+    "duplicateScenarioIds": 55,
+    "selfMappedRows": 43,
+    "promotedOverEmptyRows": 0,
+    "sceneTableRows": 158985,
+    "displaySceneTableRows": 170243,
+    "distinctSources": 157019,
+    "sourcesWithMultipleScenes": 2310,
+    "sourcesWithConflictingTranslations": 1889,
+    "sceneSpecificConflictRowsRetained": 3747,
+    "globalNullConflictSources": 220,
+    "unresolvableWithoutScene": 220
+  }
+}

@@ -1,0 +1,44 @@
+{
+ "note": "Pristine objects of the official ntd.data containers. A graft is only allowed when the target branch still matches these hashes, so a new official build cannot be silently overwritten with an old font payload.",
+ "game_build": "202611021000",
+ "source": {
+  "0": "/web/arl/202611021000/0/Build/ntd.data.gz",
+  "1": "/web/arl/202611021000/1/Build/ntd.data.gz"
+ },
+ "objects": {
+  "sharedassets0.assets/497": {
+   "type": "MonoBehaviour",
+   "bytes": 330284,
+   "sha256": "5cf8afcb4dd2c8b9fc7e237e3877db17b3f204fa32e20d98e711ce7265d83a4e"
+  },
+  "sharedassets0.assets/6": {
+   "type": "Texture2D",
+   "bytes": 16777364,
+   "sha256": "fa3fc79e7bcc75ddd2081cad252bc3a8a32151ee41563cfc6b78cd479d4cdc5a"
+  },
+  "sharedassets4.assets/30": {
+   "type": "Font",
+   "bytes": 5794434,
+   "sha256": "e8f67438cedb464fc0f6f9d18d6d8267dcb537a5c669af8cb1c5bb2197b83de2"
+  },
+  "resources.assets/173": {
+   "type": "Font",
+   "bytes": 352462,
+   "sha256": "67dca6b5036b437f041241290bf97ead30dd670de0f18148d551f2060560dc53"
+  }
+ },
+ "branches": {
+  "0": {
+   "sharedassets0.assets/497": "5cf8afcb4dd2c8b9fc7e237e3877db17b3f204fa32e20d98e711ce7265d83a4e",
+   "sharedassets0.assets/6": "fa3fc79e7bcc75ddd2081cad252bc3a8a32151ee41563cfc6b78cd479d4cdc5a",
+   "sharedassets4.assets/30": "e8f67438cedb464fc0f6f9d18d6d8267dcb537a5c669af8cb1c5bb2197b83de2",
+   "resources.assets/173": "67dca6b5036b437f041241290bf97ead30dd670de0f18148d551f2060560dc53"
+  },
+  "1": {
+   "sharedassets0.assets/497": "5cf8afcb4dd2c8b9fc7e237e3877db17b3f204fa32e20d98e711ce7265d83a4e",
+   "sharedassets0.assets/6": "fa3fc79e7bcc75ddd2081cad252bc3a8a32151ee41563cfc6b78cd479d4cdc5a",
+   "sharedassets4.assets/30": "e8f67438cedb464fc0f6f9d18d6d8267dcb537a5c669af8cb1c5bb2197b83de2",
+   "resources.assets/173": "67dca6b5036b437f041241290bf97ead30dd670de0f18148d551f2060560dc53"
+  }
+ }
+}

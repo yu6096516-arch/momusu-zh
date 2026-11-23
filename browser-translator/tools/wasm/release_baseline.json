@@ -1,0 +1,7 @@
+{
+  "version": "202611021000",
+  "game_build": "202611021000/0",
+  "official_wasm_sha256": "847349d7e5adda3e03f4883701ecbbdd1742c186ed18a6cad49d8e4e050d926b",
+  "patched_wasm_sha256": "dd76b87d75fc3498b45e2234ee4830413ca54aec16e9c3e9854110899e3fbd0d",
+  "note": "The shipped resources/ntd.patched.wasm was built from the official Wasm with this SHA-256. When verify_patch.py sees the SAME official Wasm it requires byte identity with the released patch. For a DIFFERENT official build it does NOT require the same hash (per phase 29) and instead proves correctness through dynamic target resolution + structural verification."
+}

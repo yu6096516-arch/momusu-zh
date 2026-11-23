@@ -1,0 +1,830 @@
+{
+  "schema": 1,
+  "game_build": "202611021000/0",
+  "description": "Declarative Wasm Hook targets. The primary key is (ScriptMethod.Name, TypeSignature); NO Wasm function index or element slot is used to locate a target. Historical numbers are regression references ONLY and are never read by the resolver.",
+  "targets": [
+    {
+      "id": "H1",
+      "method": "Utage.TextData$$.ctor",
+      "type_signature": "viii",
+      "csharp_signature": "void Utage_TextData___ctor (Utage_TextData_o* __this, System_String_o* text, const MethodInfo* method);",
+      "patch_logic": "translate",
+      "patch_position": "prologue",
+      "expected_params": [
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "expected_results": [],
+      "required_param_indices": [
+        1
+      ],
+      "constraints": {
+        "has_static_data_reference": true,
+        "must_contain_opcodes": [
+          "i32.load8_u"
+        ]
+      },
+      "required": true,
+      "structure": {
+        "fingerprint_sha256": "45998f4bd600a7591663061fe5ea8d795d1c9acf5af51b1b6ae901bdec102be6",
+        "instruction_count": 242,
+        "control_flow_sha256": "9c6b45038321016e8016209d990a5100aa02ff4b5f637def69f7e989b66f986f",
+        "mem_offsets": [
+          0,
+          8,
+          12,
+          13,
+          16,
+          20,
+          24,
+          28,
+          32,
+          36,
+          84,
+          88,
+          92,
+          224,
+          228,
+          280,
+          284
+        ],
+        "call_targets": [
+          "def:()->():anon:bodylen=229",
+          "def:(i32)->():anon:bodylen=11",
+          "def:(i32)->():anon:bodylen=27",
+          "def:(i32)->(i32):anon:bodylen=268",
+          "def:(i32,i32,i32)->():Utage.TextParserBase::.ctor:bodylen=180",
+          "def:(i32,i32,i32)->():anon:bodylen=64",
+          "import:a.a:(i32)->(i32)",
+          "import:a.b:()->(i32)",
+          "import:a.c:(i32,i32)->(i32)",
+          "import:a.d:(i32,i32,i32)->(i32)",
+          "import:a.f:(i32)->()",
+          "import:a.h:(i32)->(i32)",
+          "import:a.i:(i32)->(i32)",
+          "import:a.j:()->(i32)",
+          "import:a.l:(i32)->()"
+        ],
+        "param_indices_used": [
+          0,
+          1,
+          2
+        ],
+        "static_ref_count": 27,
+        "top_level_ends": 1,
+        "trailing_end_ok": true,
+        "local_decls": [
+          [
+            1,
+            127
+          ]
+        ],
+        "body_size": 599
+      },
+      "historical": {
+        "slot": "0xb8e8",
+        "func_index": 4603,
+        "def_index": 4063,
+        "body_size_before": 599,
+        "body_size_after": 607
+      }
+    },
+    {
+      "id": "H2",
+      "method": "TMPro.TMP_Text$$SetText",
+      "type_signature": "viiii",
+      "csharp_signature": "void TMPro_TMP_Text__SetText (TMPro_TMP_Text_o* __this, System_String_o* sourceText, bool syncTextInputBox, const MethodInfo* method);",
+      "patch_logic": "ui",
+      "patch_position": "prologue",
+      "expected_params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "expected_results": [],
+      "required_param_indices": [
+        0,
+        1
+      ],
+      "constraints": {},
+      "required": true,
+      "structure": {
+        "fingerprint_sha256": "ae392c20ad443325835987dd49aac09ec9a7f98bc65c8c38f3630d01313c8c8e",
+        "instruction_count": 43,
+        "control_flow_sha256": "7e5fd9566b8cedaf8a0de522733d4dcee198a223daa233c445605076f02b768c",
+        "mem_offsets": [
+          0,
+          8,
+          128,
+          408,
+          412,
+          416,
+          420,
+          676,
+          784
+        ],
+        "call_targets": [
+          "def:(i32,i32)->():TMPro.TMP_Text::PopulateTextProcessingArray:bodylen=2997",
+          "def:(i32,i32,i32,i32,i32)->():TMPro.TMP_Text::PopulateTextBackingArray:bodylen=184"
+        ],
+        "param_indices_used": [
+          0,
+          1,
+          2
+        ],
+        "static_ref_count": 0,
+        "top_level_ends": 1,
+        "trailing_end_ok": true,
+        "local_decls": [],
+        "body_size": 105
+      },
+      "historical": {
+        "slot": "0x15e0",
+        "func_index": 694,
+        "def_index": 154,
+        "body_size_before": 105,
+        "body_size_after": 115
+      }
+    },
+    {
+      "id": "H3",
+      "method": "TMPro.TMP_Text$$set_text",
+      "type_signature": "viii",
+      "csharp_signature": "void TMPro_TMP_Text__set_text (TMPro_TMP_Text_o* __this, System_String_o* value, const MethodInfo* method);",
+      "patch_logic": "ui",
+      "patch_position": "prologue",
+      "expected_params": [
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "expected_results": [],
+      "required_param_indices": [
+        0,
+        1
+      ],
+      "constraints": {},
+      "required": true,
+      "structure": {
+        "fingerprint_sha256": "4e501eb238e8c7f98f338dc9d55466177369d27b5f3721eef41d59f6a654adc1",
+        "instruction_count": 55,
+        "control_flow_sha256": "5601c1cd42853301c3e19b39695460eff2fe111ff4e7a52279b5119930a75d18",
+        "mem_offsets": [
+          0,
+          8,
+          128,
+          132,
+          408,
+          412,
+          416,
+          420,
+          676,
+          784
+        ],
+        "call_targets": [
+          "def:(i32,i32,i32)->(i32):System.String::op_Equality:bodylen=72"
+        ],
+        "param_indices_used": [
+          0,
+          1,
+          2
+        ],
+        "static_ref_count": 0,
+        "top_level_ends": 1,
+        "trailing_end_ok": true,
+        "local_decls": [],
+        "body_size": 132
+      },
+      "historical": {
+        "slot": "0x18ce6",
+        "func_index": 65961,
+        "def_index": 65421,
+        "body_size_before": 132,
+        "body_size_after": 142
+      }
+    },
+    {
+      "id": "H4",
+      "method": "Utage.AdvScenarioData$$Init",
+      "type_signature": "viii",
+      "csharp_signature": "void Utage_AdvScenarioData__Init (Utage_AdvScenarioData_o* __this, Utage_AdvSettingDataManager_o* dataManager, const MethodInfo* method);",
+      "patch_logic": "parse_begin",
+      "patch_position": "prologue_and_tail",
+      "expected_params": [
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "expected_results": [],
+      "required_param_indices": [
+        0
+      ],
+      "constraints": {
+        "tail_end_unique": true
+      },
+      "required": true,
+      "structure": {
+        "fingerprint_sha256": "a526853dbe71f309cd85f141061b265b704331cffcc49fb2e766c6576c56f9df",
+        "instruction_count": 25,
+        "control_flow_sha256": "7b84f715c19c534e878290bd344789d41bc5821ff6b139f5c8301f7654222b05",
+        "mem_offsets": [
+          12,
+          16
+        ],
+        "call_targets": [
+          "def:(i32,i32,i32)->():Utage.AdvScenarioData::MakeJumpDataList:bodylen=155",
+          "def:(i32,i32,i32)->():Utage.AdvScenarioData::MakeScanerioLabelData:bodylen=604",
+          "def:(i32,i32,i32)->(i32):Utage.AdvImportScenarioSheet::CreateCommandList:bodylen=1160",
+          "def:(i32,i32,i32,i32)->():Utage.AdvScenarioData::AddExtraCommand:bodylen=257"
+        ],
+        "param_indices_used": [
+          0,
+          1,
+          2
+        ],
+        "static_ref_count": 0,
+        "top_level_ends": 1,
+        "trailing_end_ok": true,
+        "local_decls": [],
+        "body_size": 61
+      },
+      "historical": {
+        "slot": "0x1443",
+        "func_index": 107830,
+        "def_index": 107290,
+        "body_size_before": 61,
+        "body_size_after": 71
+      }
+    },
+    {
+      "id": "H5",
+      "method": "Utage.AdvEngine$$StartScenario",
+      "type_signature": "viiii",
+      "csharp_signature": "void Utage_AdvEngine__StartScenario (Utage_AdvEngine_o* __this, System_String_o* label, int32_t page, const MethodInfo* method);",
+      "patch_logic": "playback",
+      "patch_position": "prologue",
+      "expected_params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "expected_results": [],
+      "required_param_indices": [
+        1
+      ],
+      "constraints": {},
+      "required": true,
+      "structure": {
+        "fingerprint_sha256": "2f0b01d2a2c46b34954d296d61c53cbf7c07b94e9ec8e1e0037ed78750c57585",
+        "instruction_count": 31,
+        "control_flow_sha256": "663fd54b804737842006c98fa09d4cc1b42d2f3053b81230591eebe3d19f6657",
+        "mem_offsets": [
+          0,
+          8,
+          16,
+          20,
+          24
+        ],
+        "call_targets": [
+          "def:(i32)->():anon:bodylen=11",
+          "def:(i32)->(i32):anon:bodylen=268",
+          "def:(i32,i32,i32)->(i32):UnityEngine.MonoBehaviour::StartCoroutine:bodylen=172"
+        ],
+        "param_indices_used": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "static_ref_count": 4,
+        "top_level_ends": 1,
+        "trailing_end_ok": true,
+        "local_decls": [],
+        "body_size": 81
+      },
+      "historical": {
+        "slot": "0xa9f3",
+        "func_index": 102370,
+        "def_index": 101830,
+        "body_size_before": 81,
+        "body_size_after": 87
+      }
+    },
+    {
+      "id": "H6",
+      "method": "Utage.AdvScenarioPlayer$$StartScenario",
+      "type_signature": "viiii",
+      "csharp_signature": "void Utage_AdvScenarioPlayer__StartScenario (Utage_AdvScenarioPlayer_o* __this, System_String_o* label, int32_t page, const MethodInfo* method);",
+      "patch_logic": "playback",
+      "patch_position": "prologue",
+      "expected_params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "expected_results": [],
+      "required_param_indices": [
+        1
+      ],
+      "constraints": {},
+      "required": true,
+      "structure": {
+        "fingerprint_sha256": "1e53b463ffe92bd4dd37179de9c9590d5c5404ba714242fd8ae0d51c663946ea",
+        "instruction_count": 74,
+        "control_flow_sha256": "afcc28f5718e76f84bb6dd92ffd76cd1107fe8d232b31fc2df10b73bc52fbb80",
+        "mem_offsets": [
+          0,
+          8,
+          16,
+          20,
+          24,
+          28,
+          32,
+          72,
+          74,
+          76
+        ],
+        "call_targets": [
+          "def:(i32)->():anon:bodylen=11",
+          "def:(i32)->(i32):anon:bodylen=268",
+          "def:(i32,i32)->():Utage.AdvScenarioThread::Clear:bodylen=187",
+          "def:(i32,i32)->(i32):Utage.AdvScenarioPlayer::get_MainThread:bodylen=218",
+          "def:(i32,i32,i32)->():anon:bodylen=418",
+          "def:(i32,i32,i32)->(i32):UnityEngine.MonoBehaviour::StartCoroutine:bodylen=172"
+        ],
+        "param_indices_used": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "static_ref_count": 10,
+        "top_level_ends": 1,
+        "trailing_end_ok": true,
+        "local_decls": [],
+        "body_size": 199
+      },
+      "historical": {
+        "slot": "0xb24d",
+        "func_index": 106421,
+        "def_index": 105881,
+        "body_size_before": 199,
+        "body_size_after": 205
+      }
+    },
+    {
+      "id": "H7",
+      "method": "Utage.AdvScenarioThread$$StartScenario",
+      "type_signature": "viiiii",
+      "csharp_signature": "void Utage_AdvScenarioThread__StartScenario (Utage_AdvScenarioThread_o* __this, System_String_o* label, int32_t page, bool skipPageHeaer, const MethodInfo* method);",
+      "patch_logic": "playback",
+      "patch_position": "prologue",
+      "expected_params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "expected_results": [],
+      "required_param_indices": [
+        1
+      ],
+      "constraints": {},
+      "required": true,
+      "structure": {
+        "fingerprint_sha256": "fe98bf5b7b4e83911e105696a7d9f4c2d43d2f31389c1f84b1606a21f003eb7c",
+        "instruction_count": 37,
+        "control_flow_sha256": "663fd54b804737842006c98fa09d4cc1b42d2f3053b81230591eebe3d19f6657",
+        "mem_offsets": [
+          0,
+          8,
+          16,
+          20,
+          24,
+          28,
+          32
+        ],
+        "call_targets": [
+          "def:(i32)->():anon:bodylen=11",
+          "def:(i32)->(i32):anon:bodylen=268",
+          "def:(i32,i32,i32)->(i32):UnityEngine.MonoBehaviour::StartCoroutine:bodylen=172"
+        ],
+        "param_indices_used": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "static_ref_count": 4,
+        "top_level_ends": 1,
+        "trailing_end_ok": true,
+        "local_decls": [],
+        "body_size": 95
+      },
+      "historical": {
+        "slot": "0xb278",
+        "func_index": 106420,
+        "def_index": 105880,
+        "body_size_before": 95,
+        "body_size_after": 101
+      }
+    },
+    {
+      "id": "H8",
+      "method": "Utage.AdvScenarioPlayer$$EndScenario",
+      "type_signature": "vii",
+      "csharp_signature": "void Utage_AdvScenarioPlayer__EndScenario (Utage_AdvScenarioPlayer_o* __this, const MethodInfo* method);",
+      "patch_logic": "playback_end",
+      "patch_position": "prologue",
+      "expected_params": [
+        "i32",
+        "i32"
+      ],
+      "expected_results": [],
+      "required_param_indices": [],
+      "constraints": {},
+      "required": true,
+      "structure": {
+        "fingerprint_sha256": "7862ef84535eae369db19a8181f5c8d040244feadb718b42bcbb45c302cd6861",
+        "instruction_count": 50,
+        "control_flow_sha256": "afcc28f5718e76f84bb6dd92ffd76cd1107fe8d232b31fc2df10b73bc52fbb80",
+        "mem_offsets": [
+          0,
+          36,
+          44,
+          72
+        ],
+        "call_targets": [
+          "def:(i32)->():anon:bodylen=11",
+          "def:(i32,i32)->():Utage.AdvEngine::ClearOnEnd:bodylen=14",
+          "def:(i32,i32)->():Utage.AdvScenarioThread::Clear:bodylen=187",
+          "def:(i32,i32)->(i32):Utage.AdvScenarioPlayer::get_MainThread:bodylen=218",
+          "def:(i32,i32,i32)->():anon:bodylen=418",
+          "def:(i32,i32,i32)->(i32):anon:bodylen=567"
+        ],
+        "param_indices_used": [
+          0
+        ],
+        "static_ref_count": 9,
+        "top_level_ends": 1,
+        "trailing_end_ok": true,
+        "local_decls": [],
+        "body_size": 141
+      },
+      "historical": {
+        "slot": "0xb252",
+        "func_index": 106414,
+        "def_index": 105874,
+        "body_size_before": 141,
+        "body_size_after": 145
+      }
+    },
+    {
+      "id": "H9",
+      "method": "Utage.AdvCommand$$ParseCellLocalizedText",
+      "type_signature": "iii",
+      "csharp_signature": "System_String_o* Utage_AdvCommand__ParseCellLocalizedText (Utage_AdvCommand_o* __this, const MethodInfo* method);",
+      "patch_logic": "cell",
+      "patch_position": "prologue",
+      "expected_params": [
+        "i32",
+        "i32"
+      ],
+      "expected_results": [
+        "i32"
+      ],
+      "required_param_indices": [
+        0
+      ],
+      "constraints": {},
+      "required": true,
+      "structure": {
+        "fingerprint_sha256": "943e8e85433f2c8ced69a50c48e68229f9d90ef0983f0ad6d88c61e763c44b95",
+        "instruction_count": 10,
+        "control_flow_sha256": "7b84f715c19c534e878290bd344789d41bc5821ff6b139f5c8301f7654222b05",
+        "mem_offsets": [
+          8
+        ],
+        "call_targets": [
+          "def:(i32,i32)->(i32):Utage.AdvColumnNameExtentison::QuickToString:bodylen=191",
+          "def:(i32,i32,i32)->(i32):Utage.AdvParser::ParseCellLocalizedText:bodylen=127"
+        ],
+        "param_indices_used": [
+          0,
+          1
+        ],
+        "static_ref_count": 0,
+        "top_level_ends": 1,
+        "trailing_end_ok": true,
+        "local_decls": [],
+        "body_size": 23
+      },
+      "historical": {
+        "slot": "0x138d",
+        "func_index": 8644,
+        "def_index": 8104,
+        "body_size_before": 23,
+        "body_size_after": 29
+      }
+    }
+  ],
+  "imports": [
+    {
+      "id": "I1",
+      "role": "translation protocol channel",
+      "module": "a",
+      "field": "nf",
+      "type_signature": "iii",
+      "expected_call_sites": 1,
+      "expected_call_site": {
+        "structure": {
+          "fingerprint_sha256": "f4f5e43e778118acbaa513489832a5aea9171ed014165ccaf8c36c86b5b21014",
+          "instruction_count": 211,
+          "control_flow_sha256": "2c900096730a917d18085f48904ffa727eac251b43e215be212eeec10bcf7365",
+          "mem_offsets": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            28,
+            36,
+            44,
+            48,
+            56,
+            60,
+            64,
+            104,
+            116,
+            140,
+            152,
+            156,
+            1160
+          ],
+          "call_targets": [
+            "def:()->(i32):anon:bodylen=51",
+            "def:(i32)->():anon:bodylen=951",
+            "import:a.Ta:(i32,i32,i32)->(i32)",
+            "import:a.mf:()->(i32)",
+            "import:a.nf:(i32,i32)->(i32)",
+            "import:a.of:()->(i32)"
+          ],
+          "param_indices_used": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "static_ref_count": 2,
+          "top_level_ends": 1,
+          "trailing_end_ok": true,
+          "local_decls": [
+            [
+              2,
+              127
+            ]
+          ],
+          "body_size": 485
+        },
+        "element_slot": 225216,
+        "wasm_signature": "(i32,i32,i32,i32,i32)->(i32)",
+        "second_argument_const": 1,
+        "il2cpp_name": null
+      },
+      "historical": {
+        "import_index": 336,
+        "call_site_func": 116306,
+        "call_site_slot": "0x36fc0"
+      },
+      "required": true
+    },
+    {
+      "id": "I2",
+      "role": "scene / UI context protocol channel",
+      "module": "a",
+      "field": "md",
+      "type_signature": "iii",
+      "expected_call_sites": 1,
+      "expected_call_site": {
+        "structure": {
+          "fingerprint_sha256": "16b565d4889d062ff96ab1a98e21a04277c0d7d4f3e442bab09b41b9ca70d416",
+          "instruction_count": 1670,
+          "control_flow_sha256": "7936d16b85ca7847173f4000d8bd0f2bc86ecf0dcbb2e0555e0a6ad90e6e5f48",
+          "mem_offsets": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            32,
+            48,
+            68,
+            72,
+            92
+          ],
+          "call_targets": [
+            "def:()->():anon:bodylen=102",
+            "def:()->():anon:bodylen=229",
+            "def:()->():anon:bodylen=75",
+            "def:(i32)->():anon:bodylen=114",
+            "def:(i32)->():anon:bodylen=288",
+            "def:(i32)->():anon:bodylen=316",
+            "def:(i32)->():anon:bodylen=93",
+            "def:(i32,i32)->():anon:bodylen=658",
+            "def:(i32,i32,i32)->(i32):anon:bodylen=361",
+            "import:a.a:(i32)->(i32)",
+            "import:a.b:()->(i32)",
+            "import:a.f:(i32)->()",
+            "import:a.h:(i32)->(i32)",
+            "import:a.i:(i32)->(i32)",
+            "import:a.j:()->(i32)",
+            "import:a.k:(i32,i32)->()",
+            "import:a.l:(i32)->()",
+            "import:a.m:(i32,i32,i32)->()",
+            "import:a.md:(i32,i32)->(i32)",
+            "import:a.n:()->()"
+          ],
+          "param_indices_used": [
+            0
+          ],
+          "static_ref_count": 107,
+          "top_level_ends": 1,
+          "trailing_end_ok": true,
+          "local_decls": [
+            [
+              6,
+              127
+            ]
+          ],
+          "body_size": 3704
+        },
+        "element_slot": 632,
+        "wasm_signature": "(i32)->()",
+        "second_argument_const": 498756,
+        "il2cpp_name": null
+      },
+      "historical": {
+        "import_index": 228,
+        "call_site_func": 122717,
+        "call_site_slot": "0x278"
+      },
+      "required": true
+    }
+  ],
+  "allocator": {
+    "id": "F1",
+    "role": "il2cpp::vm::String::NewSize(int32)",
+    "wrapper_method": "System.String$$FastAllocateString",
+    "wrapper_type_signature": "iii",
+    "type_signature": "ii",
+    "not_in_element_table": true,
+    "required": true,
+    "wrapper_structure": {
+      "fingerprint_sha256": "2631d5eae28ff13b61c16bba6d1edfc99d1883405d2151a1dfdb62fec80acea6",
+      "instruction_count": 3,
+      "control_flow_sha256": "7b84f715c19c534e878290bd344789d41bc5821ff6b139f5c8301f7654222b05",
+      "mem_offsets": [],
+      "call_targets": [
+        "def:(i32)->(i32):anon:bodylen=107"
+      ],
+      "param_indices_used": [
+        0
+      ],
+      "static_ref_count": 0,
+      "top_level_ends": 1,
+      "trailing_end_ok": true,
+      "local_decls": [],
+      "body_size": 7
+    },
+    "structure": {
+      "fingerprint_sha256": "41ff527e73b8e29fbd148614d93a6a1246186a3766cb9a83bee289ad681805cf",
+      "instruction_count": 47,
+      "control_flow_sha256": "17ccb3f485472f3292307fc36ed67e4572a112b8de4b6b0a3c40a5902db4a0a0",
+      "mem_offsets": [
+        0,
+        8,
+        12
+      ],
+      "call_targets": [
+        "def:()->():anon:bodylen=78",
+        "def:(i32,i32)->():anon:bodylen=117",
+        "def:(i32,i32)->(i32):anon:bodylen=42"
+      ],
+      "param_indices_used": [
+        0
+      ],
+      "static_ref_count": 4,
+      "top_level_ends": 1,
+      "trailing_end_ok": true,
+      "local_decls": [
+        [
+          2,
+          127
+        ]
+      ],
+      "body_size": 107
+    },
+    "historical": {
+      "func_index": 1702,
+      "wrapper_func_index": 130503,
+      "wrapper_element_slot": 103772
+    }
+  },
+  "appended_functions": [
+    {
+      "id": "parse_begin",
+      "type_signature": "vi",
+      "export": null
+    },
+    {
+      "id": "parse_end",
+      "type_signature": "v",
+      "export": null
+    },
+    {
+      "id": "playback",
+      "type_signature": "vi",
+      "export": null
+    },
+    {
+      "id": "playback_end",
+      "type_signature": "v",
+      "export": null
+    },
+    {
+      "id": "cell",
+      "type_signature": "vi",
+      "export": null
+    },
+    {
+      "id": "ui_hook",
+      "type_signature": "iii",
+      "export": "monmusu_cn_ui_test"
+    },
+    {
+      "id": "string_alloc_helper",
+      "type_signature": "ii",
+      "export": "monmusu_cn_alloc"
+    },
+    {
+      "id": "translate_hook",
+      "type_signature": "ii",
+      "export": "monmusu_cn_test"
+    }
+  ],
+  "exports": {
+    "monmusu_cn_test": "translate_hook",
+    "monmusu_cn_ui_test": "ui_hook",
+    "monmusu_cn_alloc": "string_alloc_helper"
+  },
+  "protocol_reference": {
+    "note": "Documentation only. build_patch.py owns the protocol constants; this block is never used for target resolution.",
+    "TAG_TRANSLATE": "0x40000000",
+    "TAG_CONTEXT": "0x20000000",
+    "UI_TAG": "0x10000000",
+    "UI_FILL": "0x08000000",
+    "MASK": "0x3fffffff",
+    "CMD": {
+      "PARSE_NAME": 1,
+      "PARSE_GRID": 2,
+      "PARSE_END": 3,
+      "PLAYBACK_BEGIN": 4,
+      "PLAYBACK_END": 5,
+      "CELL_NAME": 6,
+      "CELL_SHEET": 7,
+      "UI_OWNER": 8
+    },
+    "string_layout": {
+      "length_off": 8,
+      "chars_off": 12
+    },
+    "section_whitelist": [
+      3,
+      7,
+      10
+    ]
+  },
+  "remaining_dependencies": [
+    "JS Shim 中约 25 个固定函数表槽位（UI 层级 getter、TMP 字体安装器）仍是硬编码，本轮未重构。",
+    "6 个 icall 名字字面量绝对地址（ICALL_*）与 2 个 icall 静态缓存指针仍是硬编码。",
+    "TMP / TMP_FontAsset / Il2CppArray 等托管字段偏移仍来自 dump.cs 的固定值。",
+    "resources/assets.json 的 version_path 与 3 个资源哈希后缀仍绑定单一游戏构建。",
+    "monmusu_cn_bootstrap.js 的 CFG.version / importCount=540 / importName / contextName 仍为固定值，官方更新时需同步更新。",
+    "新版 Unity 资源、中文字体与 AssetBundle 兼容性未处理。",
+    "浏览器实机验证状态仍为 NOT RUN。"
+  ],
+  "baseline": {
+    "note": "Structural baselines for the CURRENT official build. Generated by resolve_targets.py --emit-baseline after manual review. A new game build that changes structure MUST be reviewed by a human before these values are regenerated; this tool never auto-relaxes them.",
+    "wasm_sha256": "847349d7e5adda3e03f4883701ecbbdd1742c186ed18a6cad49d8e4e050d926b",
+    "script_json_sha256": "93bc00d9a95454a877b1c0addec760975947e28d895d4bc390604234870e1216",
+    "slot2name_sha256": "b03fc2e6c37c7cc7db08ce3c54d60a7c3f97f14034e527dd19c4d6afe90d53d9"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "_note": "Build-independent identities for every runtime binding the JS shim needs. No numbers here: slots come from (name, type_signature[, native_params]) in script.json, icall literals from the exact C string the compiler emits, field offsets from dump.cs. tools/wasm/resolve_runtime.py turns this into per-branch runtime_config.json. Change a number here and the resolution report will disagree with the build.",
+  "slots": [
+    {
+      "id": "get_transform",
+      "method": "UnityEngine.Component$$get_transform",
+      "type_signature": "iii",
+      "arity": 2,
+      "purpose": "UI hierarchy path walk: component -> transform"
+    },
+    {
+      "id": "get_parent",
+      "method": "UnityEngine.Transform$$get_parent",
+      "type_signature": "iii",
+      "arity": 2,
+      "purpose": "UI hierarchy path walk: transform -> parent"
+    },
+    {
+      "id": "get_name",
+      "method": "UnityEngine.Object$$get_name",
+      "type_signature": "iii",
+      "arity": 2,
+      "purpose": "UI hierarchy path segments / shader and font names"
+    },
+    {
+      "id": "type_gettype",
+      "method": "System.Type$$GetType",
+      "type_signature": "iii",
+      "arity": 2,
+      "native_params": ["System_String_o*", "const MethodInfo*"],
+      "purpose": "resolve managed Type by name for FindObjectsOfTypeAll",
+      "why_native_params": "two overloads share (name, 'iii'): static GetType(string) and instance GetType(); only the string one is wanted"
+    },
+    {
+      "id": "find_all",
+      "method": "UnityEngine.ResourcesAPIInternal$$FindObjectsOfTypeAll",
+      "type_signature": "iii",
+      "arity": 2,
+      "purpose": "enumerate loaded Font / TMP_FontAsset / AssetBundle objects"
+    },
+    {
+      "id": "font_has_char",
+      "method": "UnityEngine.Font$$HasCharacter",
+      "type_signature": "iiii",
+      "arity": 3,
+      "native_params": ["UnityEngine_Font_o*", "uint16_t", "const MethodInfo*"],
+      "purpose": "candidate filter: does this Font carry the probe characters",
+      "why_native_params": "two overloads share (name, 'iiii'): HasCharacter(char) and HasCharacter(int)"
+    },
+    {
+      "id": "create_font",
+      "method": "TMPro.TMP_FontAsset$$CreateFontAsset",
+      "type_signature": "iiiiiiiiii",
+      "arity": 9,
+      "purpose": "build the fallback TMP font asset from the carrier Font"
+    },
+    {
+      "id": "create_font_short",
+      "method": "TMPro.TMP_FontAsset$$CreateFontAsset",
+      "type_signature": "iii",
+      "arity": 2,
+      "purpose": "arity diagnostic only (CreateFontAsset(Font)), never called"
+    },
+    {
+      "id": "object_destroy",
+      "method": "UnityEngine.Object$$Destroy",
+      "type_signature": "vifi",
+      "arity": 3,
+      "purpose": "release the TMP asset built for a failed attempt"
+    },
+    {
+      "id": "tmp_instance",
+      "method": "TMPro.TMP_Settings$$get_instance",
+      "type_signature": "ii",
+      "arity": 1,
+      "purpose": "TMP_Settings singleton, for the fallback list"
+    },
+    {
+      "id": "mat_shader",
+      "method": "UnityEngine.Material$$get_shader",
+      "type_signature": "iii",
+      "arity": 2,
+      "purpose": "compare shaders before cloning a material"
+    },
+    {
+      "id": "mat_has_prop",
+      "method": "UnityEngine.Material$$HasProperty",
+      "type_signature": "iiii",
+      "arity": 3,
+      "native_params": ["UnityEngine_Material_o*", "System_String_o*", "const MethodInfo*"],
+      "purpose": "guard before copying a material property",
+      "why_native_params": "two overloads share (name, 'iiii'): HasProperty(string) and HasProperty(int)"
+    },
+    {
+      "id": "mat_get_float",
+      "method": "UnityEngine.Material$$GetFloat",
+      "type_signature": "fiii",
+      "arity": 3,
+      "native_params": ["UnityEngine_Material_o*", "System_String_o*", "const MethodInfo*"],
+      "purpose": "copy _TextureWidth / _TextureHeight",
+      "why_native_params": "two overloads share (name, 'fiii'): GetFloat(string) and GetFloat(int)"
+    },
+    {
+      "id": "mat_set_float",
+      "method": "UnityEngine.Material$$SetFloat",
+      "type_signature": "viifi",
+      "arity": 4,
+      "native_params": ["UnityEngine_Material_o*", "System_String_o*", "float", "const MethodInfo*"],
+      "purpose": "write _TextureWidth / _TextureHeight after an atlas change",
+      "why_native_params": "two overloads share (name, 'viifi'): SetFloat(string,float) and SetFloat(int,float)"
+    },
+    {
+      "id": "mat_enable_kw",
+      "method": "UnityEngine.Material$$EnableKeyword",
+      "type_signature": "viii",
+      "arity": 3,
+      "purpose": "keep the SDF keyword set on the cloned material"
+    },
+    {
+      "id": "mat_main_tex",
+      "method": "UnityEngine.Material$$get_mainTexture",
+      "type_signature": "iii",
+      "arity": 2,
+      "purpose": "verify the installed material points at the right atlas"
+    },
+    {
+      "id": "tmp_has_char",
+      "method": "TMPro.TMP_FontAsset$$HasCharacter",
+      "type_signature": "iiiiii",
+      "arity": 5,
+      "purpose": "rasterise one glyph through the dynamic atlas (tryAddGlyph)",
+      "why_native_params": "not needed: (name, 'iiiiii') is unique"
+    },
+    {
+      "id": "tmp_set_hpc",
+      "method": "TMPro.TMP_Text$$set_havePropertiesChanged",
+      "type_signature": "viii",
+      "arity": 3,
+      "purpose": "dirty a text component so TMP re-runs glyph lookup"
+    },
+    {
+      "id": "tmp_get_font",
+      "method": "TMPro.TMP_Text$$get_font",
+      "type_signature": "iii",
+      "arity": 2,
+      "purpose": "remember the original font before swapping"
+    },
+    {
+      "id": "tmp_set_font",
+      "method": "TMPro.TMP_Text$$set_font",
+      "type_signature": "viii",
+      "arity": 3,
+      "purpose": "install the fallback font on a text component"
+    },
+    {
+      "id": "tmp_get_shared_mat",
+      "method": "TMPro.TMP_Text$$get_fontSharedMaterial",
+      "type_signature": "iii",
+      "arity": 2,
+      "purpose": "remember the original material before swapping"
+    },
+    {
+      "id": "tmp_set_shared_mat",
+      "method": "TMPro.TMP_Text$$set_fontSharedMaterial",
+      "type_signature": "viii",
+      "arity": 3,
+      "purpose": "install the fallback material on a text component"
+    },
+    {
+      "id": "object_gettype",
+      "method": "System.Object$$GetType",
+      "type_signature": "iii",
+      "arity": 2,
+      "purpose": "obtain a Type token to pass to Array.CreateInstance"
+    },
+    {
+      "id": "array_create",
+      "method": "System.Array$$CreateInstance",
+      "type_signature": "iiii",
+      "arity": 3,
+      "native_params": ["System_Type_o*", "int32_t", "const MethodInfo*"],
+      "purpose": "build the int[] TMP needs for m_AtlasTextures",
+      "why_native_params": "two overloads share (name, 'iiii'): CreateInstance(Type,int) and CreateInstance(Type,int[])"
+    }
+  ],
+  "icalls": [
+    {
+      "id": "resolve_icall",
+      "kind": "resolve_call",
+      "arity": 1,
+      "purpose": "the helper every icall wrapper calls to turn a name literal into a native pointer; has no managed metadata, so it is derived from the wrappers themselves"
+    },
+    {
+      "id": "InitializeFontEngine",
+      "kind": "literal",
+      "literal": "UnityEngine.TextCore.LowLevel.FontEngine::InitializeFontEngine_Internal()",
+      "arity": 1,
+      "required": true
+    },
+    {
+      "id": "LoadFontFace",
+      "kind": "literal",
+      "literal": "UnityEngine.TextCore.LowLevel.FontEngine::LoadFontFace_With_Size_FromFont_Internal(UnityEngine.Font,System.Int32)",
+      "arity": 1,
+      "required": true
+    },
+    {
+      "id": "GetFaceInfo",
+      "kind": "literal",
+      "literal": "UnityEngine.TextCore.LowLevel.FontEngine::GetFaceInfo_Internal(UnityEngine.TextCore.FaceInfo&)",
+      "arity": 1,
+      "required": true
+    },
+    {
+      "id": "TryAddGlyphToTexture",
+      "kind": "literal",
+      "literal": "UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphToTexture_Internal(System.UInt32,System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct&)",
+      "arity": 1,
+      "required": false,
+      "purpose": "optional single-glyph rasterisation probe"
+    },
+    {
+      "id": "FindObjectsOfTypeAll",
+      "kind": "cached",
+      "literal": "UnityEngine.ResourcesAPIInternal::FindObjectsOfTypeAll(System.Type)",
+      "slot": "find_all",
+      "required": true,
+      "purpose": "wrapper that caches its resolved pointer in a static; the cache address must be read to tell 'linked' from 'silently 0'"
+    },
+    {
+      "id": "HasCharacter",
+      "kind": "cached",
+      "literal": "UnityEngine.Font::HasCharacter(System.Int32)",
+      "slot": "font_has_char",
+      "required": true,
+      "purpose": "same cache-pointer diagnostic for the candidate probe"
+    }
+  ],
+  "fields": [
+    {"id": "cached_ptr", "kind": "abi", "value": 8,
+     "why": "UnityEngine.Object::m_CachedPtr is IL2CPP object header state, not a managed field; absent from dump.cs"},
+    {"id": "klass_name", "kind": "abi", "value": 8,
+     "why": "Il2CppClass::name offset in the IL2CPP runtime class struct; validated at runtime by verifyKlassLayout()"},
+    {"id": "string_length", "kind": "abi", "value": 8, "why": "Il2CppString::length"},
+    {"id": "string_chars", "kind": "abi", "value": 12, "why": "Il2CppString::chars (UTF-16)"},
+    {"id": "tmp_text_font_asset", "kind": "dump", "class": "TMP_Text", "field": "m_fontAsset"},
+    {"id": "tmp_text_current_font_asset", "kind": "dump", "class": "TMP_Text", "field": "m_currentFontAsset"},
+    {"id": "tmp_text_shared_material", "kind": "dump", "class": "TMP_Text", "field": "m_sharedMaterial"},
+    {"id": "tmp_asset_material", "kind": "dump", "class": "TMP_Asset", "field": "material"},
+    {"id": "tmp_font_asset_version", "kind": "dump", "class": "TMP_FontAsset", "field": "m_Version"},
+    {"id": "tmp_font_asset_source_font", "kind": "dump", "class": "TMP_FontAsset", "field": "m_SourceFontFile"},
+    {"id": "tmp_font_asset_pop_mode", "kind": "dump", "class": "TMP_FontAsset", "field": "m_AtlasPopulationMode"},
+    {"id": "tmp_font_asset_glyphs", "kind": "dump", "class": "TMP_FontAsset", "field": "m_GlyphTable"},
+    {"id": "tmp_font_asset_chars", "kind": "dump", "class": "TMP_FontAsset", "field": "m_CharacterTable"},
+    {"id": "tmp_font_asset_atlas_tex", "kind": "dump", "class": "TMP_FontAsset", "field": "m_AtlasTexture"},
+    {"id": "tmp_font_asset_atlases", "kind": "dump", "class": "TMP_FontAsset", "field": "m_AtlasTextures"},
+    {"id": "tmp_font_asset_atlas_index", "kind": "dump", "class": "TMP_FontAsset", "field": "m_AtlasTextureIndex"},
+    {"id": "tmp_font_asset_multi", "kind": "dump", "class": "TMP_FontAsset", "field": "m_IsMultiAtlasTexturesEnabled"},
+    {"id": "tmp_font_asset_atlas_w", "kind": "dump", "class": "TMP_FontAsset", "field": "m_AtlasWidth"},
+    {"id": "tmp_font_asset_atlas_h", "kind": "dump", "class": "TMP_FontAsset", "field": "m_AtlasHeight"},
+    {"id": "tmp_font_asset_padding", "kind": "dump", "class": "TMP_FontAsset", "field": "m_AtlasPadding"},
+    {"id": "tmp_font_asset_render_mode", "kind": "dump", "class": "TMP_FontAsset", "field": "m_AtlasRenderMode"},
+    {"id": "tmp_settings_default_font", "kind": "dump", "class": "TMP_Settings", "field": "m_defaultFontAsset"},
+    {"id": "tmp_settings_fallbacks", "kind": "dump", "class": "TMP_Settings", "field": "m_fallbackFontAssets"}
+  ],
+  "imports": {
+    "module": "a",
+    "translation": "nf",
+    "context": "md"
+  }
+}

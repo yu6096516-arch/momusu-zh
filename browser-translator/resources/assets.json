@@ -1,0 +1,92 @@
+{
+  "host": "assets.game-monmusu-td.net",
+  "version": "202611021000",
+  "_comment_branches": "0 = DMM (/0/Build/), 1 = FANZA (/1/Build/). Same build id; the two branches ship different Wasm and slightly different ntd.data, so those two files are declared per branch. Everything else is shared and registered under every branch prefix.",
+  "version_paths": {
+    "0": "/web/arl/202611021000/0/Build/",
+    "1": "/web/arl/202611021000/1/Build/"
+  },
+  "assets": [
+    {
+      "name": "ntd.wasm.gz",
+      "branch": "0",
+      "file": "resources/ntd.patched.wasm.gz",
+      "content_type": "application/wasm",
+      "encoding": "gzip",
+      "cors": false
+    },
+    {
+      "name": "ntd.wasm.gz",
+      "branch": "1",
+      "file": "resources/ntd.patched.1.wasm.gz",
+      "content_type": "application/wasm",
+      "encoding": "gzip",
+      "cors": false
+    },
+    {
+      "name": "ntd.loader.js",
+      "branch": "any",
+      "file": "resources/ntd.loader.js",
+      "content_type": "application/javascript",
+      "encoding": null,
+      "cors": false
+    },
+    {
+      "name": "monmusu_cn_translations.json",
+      "branch": "any",
+      "file": "resources/monmusu_cn_translations.json",
+      "content_type": "application/json",
+      "encoding": null,
+      "cors": true
+    },
+    {
+      "name": "monmusu_cn_story_index.json",
+      "branch": "any",
+      "file": "resources/monmusu_cn_story_index.json.gz",
+      "content_type": "application/json",
+      "encoding": "gzip",
+      "cors": true
+    },
+    {
+      "name": "monmusu_cn_ui_index.json",
+      "branch": "any",
+      "file": "resources/monmusu_cn_ui_index.json.gz",
+      "content_type": "application/json",
+      "encoding": "gzip",
+      "cors": true
+    },
+    {
+      "name": "ntd.data.gz",
+      "branch": "0",
+      "file": "resources/ntd.data.gz",
+      "content_type": "application/octet-stream",
+      "encoding": "gzip",
+      "cors": false
+    },
+    {
+      "name": "ntd.data.gz",
+      "branch": "1",
+      "file": "resources/ntd.data.1.gz",
+      "content_type": "application/octet-stream",
+      "encoding": "gzip",
+      "cors": false
+    }
+  ],
+  "suffix_assets": [
+    {
+      "suffix": "4f033e53402be75a76129c19ea1ef316.bytes",
+      "file": "resources/font_ui.bytes",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "suffix": "76b02c77b36be621c15bf690ab30a740e5bc8b35b1ed3261c7211ec17d84448f.bytes",
+      "file": "resources/font_buttons.bytes",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "suffix": "c8554d9815b27404389aaf60fb6f2507.bytes",
+      "file": "resources/ui_detail.bytes",
+      "content_type": "application/octet-stream"
+    }
+  ]
+}

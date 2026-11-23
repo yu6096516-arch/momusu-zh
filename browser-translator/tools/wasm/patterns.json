@@ -1,0 +1,10 @@
+{
+  "_comment": "Exact-match table. Any runtime string equal to one of these is rewritten in place.",
+  "replacement": "BPT WEBGL TEST",
+  "targets": [
+    {"id": "prologue_narration_01", "scene": "1100011nml", "text": "神はまず、可愛い少年をお作りになられた。"},
+    {"id": "prologue_narration_02", "scene": "1100011nml", "text": "（ゲシュペンス島・創世記、第１章第１節より抜粋）"},
+    {"id": "prologue_dialogue_01", "scene": "1100011nml", "text": "いえ、痒くは……ていうか、ちっちゃ！？"},
+    {"id": "prologue_dialogue_02", "scene": "1100011nml", "text": "なにも……なにも、思い出せない……ううっ、頭が……。"}
+  ]
+}
