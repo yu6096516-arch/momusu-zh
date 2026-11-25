@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T11:46:29.171042+00:00",
+  "generatedAt": "2026-11-25T13:47:34.281558+00:00",
   "commit": "local",
   "files": {
     "styles.json": {
@@ -17220,8 +17220,8 @@
       "size": 67555
     },
     "UICanvas/ability_data/zh_Hans.json": {
-      "sha256": "c7931702a3abb1d4586a14f9e553968ee61c4ef28796177f42f831000ade37e5",
-      "size": 555993
+      "sha256": "75bf585bf99d870e062bc77a90b7237a2a36adedaf2e37214301c89eeab10ee4",
+      "size": 550108
     },
     "UICanvas/additional_login_bonus/zh_Hans.json": {
       "sha256": "6a7b6691f5edfe3b6deaab9f0ab380c844bbbb6d64ec2b777c27cd25119d9baf",
@@ -17392,8 +17392,8 @@
       "size": 309
     },
     "UICanvas/message_data/zh_Hans.json": {
-      "sha256": "42b2a6a197fed8d44cd530b815717c51f14e37848d5cd24681c87e5bd65776dc",
-      "size": 244246
+      "sha256": "823e3547e0b4a73bb9edaa4b27ad7805a9cbecb3a6a52a29f56e8ca82259e28a",
+      "size": 248290
     },
     "UICanvas/mission_category_collective_data/zh_Hans.json": {
       "sha256": "7681d8fbebadb53e5f28681790c4a93beb530a975eca39f4ff00e2381a21bd6d",
@@ -17436,8 +17436,8 @@
       "size": 893
     },
     "UICanvas/quest_data/zh_Hans.json": {
-      "sha256": "08bfd120577b45cef1614f03e55983cb0effca99bc411acf1b3d569cd49e7823",
-      "size": 1631219
+      "sha256": "43fd1282cd7dde63ce722e8411754dde3425d66d30471c988759565ca5d09700",
+      "size": 1401334
     },
     "UICanvas/quest_guide_message_data/zh_Hans.json": {
       "sha256": "fc867f23cc83bd161c343458c7ae027767737b13524ca61574ce40ba37c1ed6a",
@@ -17524,8 +17524,8 @@
       "size": 6679
     },
     "UICanvas/sugoroku_data/zh_Hans.json": {
-      "sha256": "180adf3ff5ecf2c57d77e9f224a76a1394528a492427626ef487ce0bf6896a62",
-      "size": 3286
+      "sha256": "05bcb87b5aba3fe537cd3e99b25d6c7f21b055e950b6e35fbf2f693cd222e0fa",
+      "size": 3338
     },
     "UICanvas/summon_point_data/zh_Hans.json": {
       "sha256": "186a04969a06a6ab04003746e994527618539515a6be2cdfd59fb51d7c6956e7",
@@ -17540,8 +17540,8 @@
       "size": 5433
     },
     "UICanvas/training_menu/zh_Hans.json": {
-      "sha256": "7650b632c86249c6e90a6c8e7ba814578224361fa48a5690ae99c472154c1738",
-      "size": 24088
+      "sha256": "e650bb320ef52344981174992f41ec7b33fde2b150a322d1ece434214a10b779",
+      "size": 24709
     },
     "UICanvas/trait_group_table/zh_Hans.json": {
       "sha256": "e68dd605003f132b98b9c6a6c08cc7c5ace5b0d61cb3c4930d1808e0c9d17b33",
@@ -17556,8 +17556,8 @@
       "size": 60603
     },
     "UICanvas/ui_text/zh_Hans.json": {
-      "sha256": "d9c736fec9ea40f41e6ba0d82c3bc9ecb476e055324bee5da2f10e247a99fbfb",
-      "size": 2292650
+      "sha256": "add636098a85b44f0d552e97ef9ec438c4b1a2c550c506b30e909a269d369d8b",
+      "size": 2253904
     },
     "UICanvas/unique_weapon_ability_data/zh_Hans.json": {
       "sha256": "da1fcd28cb133c2d2dcf3d0ec79967e9c80e56ed5d79450c6b30eb532a60b8bc",
@@ -17584,8 +17584,8 @@
       "size": 164
     },
     "UICanvas/unit_skill/zh_Hans.json": {
-      "sha256": "fa207dd36d7e9d6296df9f36132c3e3775f2dd5764b5cf4709359d12030b2380",
-      "size": 7079353
+      "sha256": "0a9f9b9abffd31e41dcecfdb52b583d89dc16ab7ce092d78ee79737faea0e066",
+      "size": 7152194
     },
     "UICanvas/unit_skin_data/zh_Hans.json": {
       "sha256": "819d145f31235d4825aa020ae1ead4757425e5ea00d9071798fbb54941380bd7",
@@ -17612,8 +17612,8 @@
       "size": 150
     },
     "UICanvas/_awaked/zh_Hans.json": {
-      "sha256": "d6a36cb7ce1a9a970ebf99d050dd752bfc180fcc10f659a5c6fcbb76f657da7d",
-      "size": 860029
+      "sha256": "29bb6c7024e92705d6842077a7da50dee048a776221b3c5a7bc980bb455e1619",
+      "size": 856359
     },
     "UICanvas/_other/zh_Hans.json": {
       "sha256": "dd41242868cc8cf6f77e8307f8a442b0e128272a949e427c913384a63d403cf4",
