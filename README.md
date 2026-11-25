@@ -26,7 +26,7 @@
 
 **方式一：下发行包
 
-到 [Releases](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.2) 下载 `MonmusuTD_zh-Hans_v1.2.zip`（59.5 MB），
+到 [Releases](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.3) 下载 `MonmusuTD_zh-Hans_v1.3.zip`（59.5 MB），
 在**已装好上面前置**的游戏上，把里面的 `BepInEx` 文件夹覆盖到游戏根目录即可（已含插件、译文、字体、配置）。
 
 **方式二：只用仓库译文**
@@ -75,6 +75,17 @@ ManualSyncWithF6 = false     # F6 只重载本地
 ---
 
 ## 更新记录
+
+**v1.3（2026-11-25）** — [下载](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.3) `MonmusuTD_zh-Hans_v1.3.zip`（58.4 MB）
+- 剧情：主线 / 活动 / 寝室 / 特殊剧情 —— 545 个场景、165,301 行
+- 界面：100 个 UI 分类、136,147 条（菜单、按钮、任务、商店、扭蛋、图鉴、公告等）
+- 角色名与场景人名：12,962 条
+- 技能：EX 技能、技能说明、副技能名称与效果、637 条副技能规则
+- 特性与能力：种族特性、职业特性、能力说明（含觉醒分支与数值表达式的解析后形态）
+- 装备与道具：专武 / 装备 / 道具名（含强化等级）、武器能力说明
+- 字体：Alimama 方圆体图集补到 4,318 个字形（含「扔 / 垃 / 圾 / 处」等简体专有字），译文统一使用同一字体，不再出现回退字体大小不一
+- 插件：MonsterMusumeTDMod.dll + 配置（译文自动更新指向本仓库）
+- 工具：插件自带的译文工具
 
 **v1.2（2026-11-25）** — [下载](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.2) `MonmusuTD_zh-Hans_v1.2.zip`（59.5 MB）
 - 剧情：主线 / 活动 / 寝室 / 特殊剧情 —— 545 个场景、165,301 行
