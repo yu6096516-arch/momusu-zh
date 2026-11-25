@@ -24,24 +24,11 @@
 
 ## 怎么装
 
-**方式一：下发行包
+下发行包
 
 到 [Releases](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.4) 下载 `MonmusuTD_zh-Hans_v1.4.zip`（59.5 MB），
 在**已装好上面前置**的游戏上，把里面的 `BepInEx` 文件夹覆盖到游戏根目录即可（已含插件、译文、字体、配置）。
 
-**方式二：只用仓库译文**
-
-1. 先装好 **BepInEx 6（IL2CPP 版）** 到游戏根目录（见上表）
-2. 把本仓库 `translations` 整个文件夹放进：
-
-```
-<游戏根目录>\BepInEx\plugins\MonsterMusumeTDMod\translations\
-```
-
-3. 需要 **MonsterMusumeTDMod.dll**（汉化插件本体，v0.1.132，不在本仓库）
-4. 启动游戏即生效
-
-> 插件源码在仓库 `source/`，二进制请到原作者处获取：`Berumic/MomusuMod-Android-workflow`
 
 ---
 
