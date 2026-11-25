@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T14:26:18.339884+00:00",
+  "generatedAt": "2026-11-25T11:46:29.171042+00:00",
   "commit": "local",
   "files": {
     "styles.json": {
@@ -16659,6 +16659,30 @@
       "sha256": "c20510f467b494d8a1b07b99bd78c4c9419ede8e5e49a76c3dd4c1452e7ea762",
       "size": 13441
     },
+    "scenarios/活动/妖怪岛/eb111806bnml/zh_Hans.json": {
+      "sha256": "13dcc93eed6473c49a9452612c38e0f6b2f3cb9a3c486b49a746797e10d6eb9d",
+      "size": 2895
+    },
+    "scenarios/活动/妖怪岛/ev1118051nml/zh_Hans.json": {
+      "sha256": "2ed1ed755629b505375c384a63435f7dd496f908f3bd0ff7916d5e8a7b1a6480",
+      "size": 6875
+    },
+    "scenarios/活动/妖怪岛/ev1118052nml/zh_Hans.json": {
+      "sha256": "0ee863f5441ce932b0d38564096563bd8e0411fdbb643e56b071ec0a4bbc1854",
+      "size": 4902
+    },
+    "scenarios/活动/妖怪岛/ev1118061nml/zh_Hans.json": {
+      "sha256": "66c1ba12365be0fa985ceb833ad622f5cad960cb4a8d43b5d38ef3f296c0159d",
+      "size": 5088
+    },
+    "scenarios/活动/妖怪岛/ev1118071nml/zh_Hans.json": {
+      "sha256": "382beac12006a56f9efc7e7f11a57383e9d2c487d5320cbba10e32b9d6bfc948",
+      "size": 8644
+    },
+    "scenarios/活动/妖怪岛/ev1118072nml/zh_Hans.json": {
+      "sha256": "25e5de5998a794f6b09ba26d776b8c0efe7520cabebb1bb9ea3018df6198107f",
+      "size": 7731
+    },
     "scenarios/活动/犬耳对猫耳+禁忌塔/eb111302anml/zh_Hans.json": {
       "sha256": "ced8f9f29ff341b21185863b6de778e2acae6543d5d9da321e9de853aaf6e0f5",
       "size": 3732
@@ -17196,24 +17220,24 @@
       "size": 67555
     },
     "UICanvas/ability_data/zh_Hans.json": {
-      "sha256": "96efa73f43eefef86411d4da7fdf3cb6deff80eb05ca186dd581a9a4562e9344",
-      "size": 537233
+      "sha256": "c7931702a3abb1d4586a14f9e553968ee61c4ef28796177f42f831000ade37e5",
+      "size": 555993
     },
     "UICanvas/additional_login_bonus/zh_Hans.json": {
       "sha256": "6a7b6691f5edfe3b6deaab9f0ab380c844bbbb6d64ec2b777c27cd25119d9baf",
       "size": 190
     },
     "UICanvas/attach_ability_data/zh_Hans.json": {
-      "sha256": "3b99e512c048a5aff44d11aedb6b7755fb9fad1ef8e1d19c4ffee30b959fa88a",
-      "size": 70174
+      "sha256": "05b2da71f59de8eaee504d548f53020d9fccc457c8f494b991532415cd3e9360",
+      "size": 73387
     },
     "UICanvas/attr_list/zh_Hans.json": {
       "sha256": "fc660c4f7501dd0c3002cf0d295e30ffb4d43c466f404b6b68c26fd0c0bcdcd3",
       "size": 161
     },
     "UICanvas/battle_event/zh_Hans.json": {
-      "sha256": "32708d0068009814e2324cba9ebfa4dcaf15241dd93c54ba3bdce08e5a626b82",
-      "size": 90328
+      "sha256": "96e031bc20ba5c6610a61f626a2c37fa4a5d30f7600063f00b643146be8e7014",
+      "size": 97259
     },
     "UICanvas/bingo_data/zh_Hans.json": {
       "sha256": "813ff98ca7965e4dd503536e39298fb1deee5e8958ecaacf68d6932c1fd6199d",
@@ -17224,8 +17248,8 @@
       "size": 2650
     },
     "UICanvas/bom_data/zh_Hans.json": {
-      "sha256": "d66e62c3c494d09e68fe0afd348ac14ead684e49facbf083cdf133914b65b720",
-      "size": 985
+      "sha256": "553e8c5176b6451863d67c39d02d90ee3ffdcc9a3d6305f3f378bea2297c40aa",
+      "size": 1186
     },
     "UICanvas/bonus_pass_data/zh_Hans.json": {
       "sha256": "9b30b909cec5f5d5c6c25092e04eaf2960b0e70dcbf8ae5cbc337b822f02dd71",
@@ -17264,8 +17288,8 @@
       "size": 3691
     },
     "UICanvas/detail_text_data/zh_Hans.json": {
-      "sha256": "f7e9fc5f3db099842844647293384072b72642c29ba01d1cdbd958bdd2799f36",
-      "size": 56496
+      "sha256": "053191e246a6b3718aa5e7546a31a767e319da5653c624041811241cca00fbc0",
+      "size": 59530
     },
     "UICanvas/endless_challenge_buff/zh_Hans.json": {
       "sha256": "569f61c1b044e9e8f97bfb180c475490e4b7fa44117dcd47a126219253286843",
@@ -17308,16 +17332,16 @@
       "size": 159324
     },
     "UICanvas/gacha_detail_data/zh_Hans.json": {
-      "sha256": "25e0f57bbde5981a4ff3617c0f269449efed65125f6b0d1a6166652e50365efe",
-      "size": 6657703
+      "sha256": "f223ac5feb6d1e4880b8e98ff353aedd8ce1f4698244dd6e7329536261d59f50",
+      "size": 6671540
     },
     "UICanvas/gacha_stamp_sheet_data/zh_Hans.json": {
       "sha256": "1469d8383f69a1419b1035fe2fcc5be7aa43a35dddfb3de6eb78eb96d8322116",
       "size": 9301
     },
     "UICanvas/gallery_data/zh_Hans.json": {
-      "sha256": "39607a66cebdc09046d94345ae4cb72990d8d867b015096d9ad22a488ad50942",
-      "size": 14236
+      "sha256": "cad26d1723bd9e7b6f32eb771f202937939a9e3515484bd6acb74e18988c2b6b",
+      "size": 15484
     },
     "UICanvas/game_start_loading_image/zh_Hans.json": {
       "sha256": "978dd38480acf93f405db9267bb3ca91a06a670b6d10027fd9ec7b4b96094a18",
@@ -17336,8 +17360,8 @@
       "size": 4295
     },
     "UICanvas/help_window_data/zh_Hans.json": {
-      "sha256": "41fba1812cad0a846bb695b52f9798f960cf6aba1b5e3a78e35bc2c876a2284a",
-      "size": 2789783
+      "sha256": "5ff7e6b7f203c9ffb3d0da643d7671bb2782890f7dca7c3b27b6c26be8327f97",
+      "size": 2811629
     },
     "UICanvas/interact_story_data/zh_Hans.json": {
       "sha256": "beabce8aac1472c38c5fe20d9f4114906d70854bf836f49481b9b7f4f95994f9",
@@ -17376,8 +17400,8 @@
       "size": 12570
     },
     "UICanvas/mission_data/zh_Hans.json": {
-      "sha256": "b6a3d6beb9faa151479ba45825bc6f9ca0359a4f9a18981fd52901843af0a974",
-      "size": 1793713
+      "sha256": "11a437aa2601929bc99e412e0acf4f7455d05b4d4f90ff55a1c7cea1be6ed13e",
+      "size": 1854372
     },
     "UICanvas/mission_panel_content/zh_Hans.json": {
       "sha256": "335cb3a05430e4dcd349981a25b7df913bc6009e98cf28997a492d3b93b420ab",
@@ -17396,8 +17420,8 @@
       "size": 2678
     },
     "UICanvas/picturebook_data/zh_Hans.json": {
-      "sha256": "9dcef6530e05253ce6fa7c53312d1daeebfd92518bd3ba61d7dc072149852b71",
-      "size": 981969
+      "sha256": "689bf837a53c6dbdc26d6b877426c2a395ce0f72832cd6648be1471150cd47fb",
+      "size": 992272
     },
     "UICanvas/pray_ability_data/zh_Hans.json": {
       "sha256": "c65e3a2713646f05a560f4a48693fb03e8784d503963840b02a022d48c899920",
@@ -17412,8 +17436,8 @@
       "size": 893
     },
     "UICanvas/quest_data/zh_Hans.json": {
-      "sha256": "9933b7a9eef3fc8d2f08c60dacb5535089e9b784be0d5e67f580c35fd4ceeeff",
-      "size": 1613921
+      "sha256": "08bfd120577b45cef1614f03e55983cb0effca99bc411acf1b3d569cd49e7823",
+      "size": 1631219
     },
     "UICanvas/quest_guide_message_data/zh_Hans.json": {
       "sha256": "fc867f23cc83bd161c343458c7ae027767737b13524ca61574ce40ba37c1ed6a",
@@ -17436,24 +17460,24 @@
       "size": 46404
     },
     "UICanvas/season_pass_data/zh_Hans.json": {
-      "sha256": "6f614d168a10784acb21b38b3f492ce0c8ab7fb247dbae5805f06fd247d3e177",
-      "size": 386
+      "sha256": "1110871d6a28fb670fe3ffb1db7cd6f5b5efa7f7adc70c30e2daef0ebda85575",
+      "size": 479
     },
     "UICanvas/serial_code_campaign_data/zh_Hans.json": {
       "sha256": "7db25d12d8b4889bc634b2aa6982d9a78b7de2af596fd629271e5f55bb624ff6",
       "size": 6546
     },
     "UICanvas/shop_data/zh_Hans.json": {
-      "sha256": "da7962c99083b3812c8eaf9d78999f324fd407b8c38fb00eed357dee324aef40",
-      "size": 961485
+      "sha256": "29f5de28fb325ebbfc2a6f7f12699f18558abd88c36e1334a2d789cda3818ae5",
+      "size": 984897
     },
     "UICanvas/shop_guide_message_data/zh_Hans.json": {
       "sha256": "1e636f93fb5dfa00ac93e90b4fb16f67a1f8693ec197bc52ab47906549ae2f29",
       "size": 869
     },
     "UICanvas/shop_tab/zh_Hans.json": {
-      "sha256": "d1e94f8d6663e87637dd003b694b1592d8e700e16879dd376186f11647791a11",
-      "size": 28840
+      "sha256": "8e0a41a627d700571dbaf9b4193a540b914a7b71a61fe91f13c186d87a9512e0",
+      "size": 30639
     },
     "UICanvas/skill_data/zh_Hans.json": {
       "sha256": "0739605e3e1e6a1d5984084f6f1f78859ab059320c8279598b0daff94c29217d",
@@ -17576,8 +17600,8 @@
       "size": 4265
     },
     "UICanvas/wallet_template/zh_Hans.json": {
-      "sha256": "8c9cecd6ac7141cc476f0b521a113d72df28851720159aebec3e675294df0d69",
-      "size": 339329
+      "sha256": "11a3fe9f2c6b2d4516f0153c4038a3a14e25753b88abf1a7b6dc180fc6b31717",
+      "size": 348642
     },
     "UICanvas/weather_list/zh_Hans.json": {
       "sha256": "1bd6f2579e5708730fdf6a2cf22873dc7ea7c3794ee603fecb5e107665a8b02a",
@@ -17588,8 +17612,8 @@
       "size": 150
     },
     "UICanvas/_awaked/zh_Hans.json": {
-      "sha256": "7f8081a5e274ae330844e395c87b3032125e5a93c00e8a6543c64d4911732a74",
-      "size": 859244
+      "sha256": "d6a36cb7ce1a9a970ebf99d050dd752bfc180fcc10f659a5c6fcbb76f657da7d",
+      "size": 860029
     },
     "UICanvas/_other/zh_Hans.json": {
       "sha256": "dd41242868cc8cf6f77e8307f8a442b0e128272a949e427c913384a63d403cf4",
