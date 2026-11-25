@@ -76,7 +76,7 @@ ManualSyncWithF6 = false     # F6 只重载本地
 
 ## 更新记录
 
-**v1.2（2026-11-25）** — [下载](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.2) \MonmusuTD_zh-Hans_v1.2.zip\（59.5 MB）
+**v1.2（2026-11-25）** — [下载](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.2) `MonmusuTD_zh-Hans_v1.2.zip`（59.5 MB）
 - 剧情：主线 / 活动 / 寝室 / 特殊剧情 —— 545 个场景、165,301 行
 - 界面：100 个 UI 分类、136,147 条（菜单、按钮、任务、商店、扭蛋、图鉴、公告等）
 - 角色名与场景人名：12,962 条
@@ -87,7 +87,7 @@ ManualSyncWithF6 = false     # F6 只重载本地
 - 插件：MonsterMusumeTDMod.dll + 配置（译文自动更新指向本仓库）
 - 工具：插件自带的译文工具
 
-**v1.1（2026-11-23）** — [下载](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.2) `MonmusuTD_zh-Hans_v1.2.zip`（59.5 MB）
+**v1.1（2026-11-23）** — [下载](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.1) `MonmusuTD_zh-Hans_v1.1.zip`（59.5 MB）
 - 剧情：主线 / 活动 / 寝室 / 特殊剧情 —— 544 个场景、165,102 行
 - 界面：100 个 UI 分类、136,021 条（菜单、按钮、任务、商店、扭蛋、图鉴、公告等）
 - 角色名与场景人名：12,962 条
