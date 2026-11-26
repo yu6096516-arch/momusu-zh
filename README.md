@@ -16,18 +16,31 @@
 | .NET 运行时 | **.NET 6（6.0.7）** | BepInEx 6 的 loader 需要；游戏目录 `dotnet\`（coreclr/System.*）或系统装的 .NET 6 均可 |
 | Unity 托管库 | `BepInEx\unity-libs`（2022.3.62） | 第一次启动时 Il2CppInterop 用它生成 `BepInEx\interop\`，会慢几分钟，属正常 |
 
+**不用自己到处找**：整套前置已经打成压缩包，直接下：
+
+> **前置包（38 MB）**：<https://github.com/yu6096516-arch/momusu-zh/releases/tag/prereq-6.0.0-be.785>
+> 文件名：`BepInEx_6.0.0-be.785_IL2CPP_win-x64_prereq.zip`
+> 解压到**游戏根目录**（和 `monster_musume_tdx.exe` 同一层），合并覆盖；先启动一次游戏，
+> 等它生成 `BepInEx\interop\`（几十个 dll，几分钟），再装汉化包。
+
 其余都不用装：字体（`alimama`）、薄码（`MonsterMusumeTDMod.dll` 内置 `[Mosaic] EnableSpineMosaicReplacement`）、译文全部随包。
 
 > ⚠️ 发行包**不能单独用在裸游戏上**：包里只有 `BepInEx\config` 和 `BepInEx\plugins`，缺 `BepInEx\core` 会直接起不来。先装好 BepInEx 6 IL2CPP，再覆盖发行包。
 
 ---
 
-## 怎么装
+## 怎么装（顺序别反：先前置，再汉化包）
 
-下发行包
+**第一步：装前置**
 
-到 [Releases](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.4) 下载 `MonmusuTD_zh-Hans_v1.4.zip`（59.5 MB），
-在**已装好上面前置**的游戏上，把里面的 `BepInEx` 文件夹覆盖到游戏根目录即可（已含插件、译文、字体、配置）。
+到 [前置 Release](https://github.com/yu6096516-arch/momusu-zh/releases/tag/prereq-6.0.0-be.785) 下
+`BepInEx_6.0.0-be.785_IL2CPP_win-x64_prereq.zip`（38 MB），解压到游戏根目录；
+启动一次游戏，等它生成 `BepInEx\interop\` 后退出。
+
+**第二步：装汉化包**
+
+到 [Releases](https://github.com/yu6096516-arch/momusu-zh/releases/tag/v1.4) 下载 `MonmusuTD_zh-Hans_v1.4.zip`（58.4 MB），
+把里面的 `BepInEx` 文件夹覆盖到游戏根目录即可（已含插件、译文、字体、配置）。
 
 
 ---
